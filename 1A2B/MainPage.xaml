@@ -40,8 +40,7 @@
         <TextBlock x:Name="TextTest" Text="Column 1 sizes to its conent." 
                    FontSize="24" 
                    Grid.Column="6"
-                   Grid.Row="2"
-                   SelectionChanged="TextTest_SelectionChanged" />
+                   Grid.Row="2" />
 
         <Button Grid.Column="2" Grid.Row="4" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
             1
