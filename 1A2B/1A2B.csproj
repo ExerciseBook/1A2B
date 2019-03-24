@@ -123,7 +123,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="source\UserControl.cs" />
+    <Compile Include="_1A2B\source\DisplayControl.cs" />
+    <Compile Include="_1A2B\source\InputControl.cs" />
+    <Compile Include="_1A2B\source\GameLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

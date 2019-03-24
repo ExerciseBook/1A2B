@@ -12,49 +12,114 @@ namespace _1A2B.source
     class InputControl
     {
 
-        private TextBlock TextTest;
+        public enum InputType { NONE, Num0, Num1, Num2, Num3, Num4, Num5, Num6, Num7, Num8, Num9, Num10, Enter, ESC, Backspace };
 
-        public InputControl(TextBlock textBlock) {
-            this.TextTest = textBlock;
+        InputType[] inputBuff = new InputType[4];
+
+
+        DisplayControl displayControl;
+        GameLogic gameControl;
+
+
+        public InputControl() {
             Window.Current.CoreWindow.KeyDown += onKeydown;
         }
 
+        public void setDisplayControl(DisplayControl aDisplayControl) {
+            displayControl = aDisplayControl;
+        }
+
+        public void setGameControl(GameLogic aGameControl) {
+            gameControl = aGameControl;
+        }
+
+        private void input(InputType a) {
+            if (a == InputType.ESC)
+            {
+                inputBuff = new InputType[4];
+            }
+            else if (a == InputType.Enter) {
+                if (inputBuff[3] != InputType.NONE) {
+                    int number = 0;
+
+                    for (int i = 0; i < 4; i++) {
+                        number += ((int)inputBuff[i] - 1) * Power(10, (3 - i));
+                    }
+
+                    gameControl.submit(number);
+                    inputBuff = new InputType[4];
+                }
+            }
+            else if (a == InputType.Backspace) {
+                int i = 3;
+                while ((i >= 0) && (inputBuff[i] == InputType.NONE)) {
+                    i--;
+                }
+                if (i >= 0) {
+                    inputBuff[i] = InputType.NONE;
+                }
+            }
+            else {
+                if (inputBuff[3] == InputType.NONE)
+                {
+                    int i = 0;
+                    while (inputBuff[i] != InputType.NONE) i++;
+                    inputBuff[i] = a;
+                }
+            }
+
+            displayControl.InputScreen.Text=inputBuff;
+
+            
+        }
+
+        private int Power(int Base, int Kick)
+        {
+            int result = 1;
+
+            for (int i = 1; i <= Kick; i++) {
+                result = result * Base;
+            }
+
+            return result;
+        }
 
         public async void onKeydown(CoreWindow sender, KeyEventArgs e)
         {
             // TextTest.Text = e.VirtualKey.GetHashCode().ToString();
             /*
-                NumberPad0 96
-                Number0 48
-                Enter 13
-                Escape 27
+             *  NumberPad0 96
+             *  Number0 48
+             *  Enter 13
+             *  Escape 27
              */
             switch (e.VirtualKey.GetHashCode())
             {
                 case 96:
-                case 48: { TextTest.Text += "0"; break; }
+                case 48: { input(InputType.Num0); break; }
                 case 97:
-                case 49: { TextTest.Text += "1"; break; }
+                case 49: { input(InputType.Num1); break; }
                 case 98:
-                case 50: { TextTest.Text += "2"; break; }
+                case 50: { input(InputType.Num2); break; }
                 case 99:
-                case 51: { TextTest.Text += "3"; break; }
+                case 51: { input(InputType.Num3); break; }
                 case 100:
-                case 52: { TextTest.Text += "4"; break; }
+                case 52: { input(InputType.Num4); break; }
                 case 101:
-                case 53: { TextTest.Text += "5"; break; }
+                case 53: { input(InputType.Num5); break; }
                 case 102:
-                case 54: { TextTest.Text += "6"; break; }
+                case 54: { input(InputType.Num6); break; }
                 case 103:
-                case 55: { TextTest.Text += "7"; break; }
+                case 55: { input(InputType.Num7); break; }
                 case 104:
-                case 56: { TextTest.Text += "8"; break; }
+                case 56: { input(InputType.Num8); break; }
                 case 105:
-                case 57: { TextTest.Text += "9"; break; }
+                case 57: { input(InputType.Num9); break; }
                 case 10:
-                case 13: { break; /*按下回车*/ }
-                case 27: { break; /*按下ESC*/}
-
+                case 13: { input(InputType.Enter); break; }
+                case 27: { input(InputType.ESC); break; }
+                case 8: { input(InputType.Backspace); break; }
+                //default: throw new Exception(e.VirtualKey.GetHashCode().ToString());
 
             }
 

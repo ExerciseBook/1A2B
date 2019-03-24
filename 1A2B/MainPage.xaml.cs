@@ -27,9 +27,12 @@ namespace _1A2B
         {
             this.InitializeComponent();
 
-            inputControl = new _1A2B.source.InputControl(TextTest);
+            inputControl = new _1A2B.source.InputControl();
             gameControl = new _1A2B.source.GameLogic();
-            displayControl = new _1A2B.source.DisplayControl();
+            displayControl = new _1A2B.source.DisplayControl(TextTest);
+
+            inputControl.setDisplayControl(displayControl);
+            inputControl.setGameControl(gameControl);
         }
 
 

@@ -52,7 +52,7 @@
         */
 
 
-        public void submit(string a) {
+        public void submit(int a) {
             //用户提交答案尝试的时候这个方法会被调用
             //返回值啥的我没有限定，反正你最后告诉我你返回值是啥意思就好
 
