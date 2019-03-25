@@ -33,8 +33,10 @@ namespace _1A2B
 
             inputControl.setDisplayControl(displayControl);
             inputControl.setGameControl(gameControl);
-        }
 
+
+            
+        }
 
 
     }

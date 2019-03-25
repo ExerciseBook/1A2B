@@ -126,6 +126,9 @@
     <Compile Include="_1A2B\source\DisplayControl.cs" />
     <Compile Include="_1A2B\source\InputControl.cs" />
     <Compile Include="_1A2B\source\GameLogic.cs" />
+    <Compile Include="_1A2B\Views\KeyBoard.xaml.cs">
+      <DependentUpon>KeyBoard.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -162,6 +165,7 @@
       <Version>6.2.3</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
