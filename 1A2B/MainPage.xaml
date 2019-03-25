@@ -8,7 +8,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     MinWidth="1366"
-    MinHeight="768">
+    MinHeight="768"
+    MaxWidth="1366"
+    MaxHeight="768"
+    >
     
     
  
@@ -18,9 +21,7 @@
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="6*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="14*"/>
         </Grid.ColumnDefinitions>
@@ -30,48 +31,67 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="TextTest" Text="Column 1 sizes to its conent." 
-                   FontSize="24" 
-                   Grid.Column="6"
-                   Grid.Row="2" />
 
-        <Button Grid.Column="2" Grid.Row="4" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
-            1
-        </Button>
-        <Button Grid.Column="3" Grid.Row="4" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
-            2
-        </Button>
-        <Button Grid.Column="4" Grid.Row="4" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
-            3
-        </Button>
-        <Button Grid.Column="2" Grid.Row="5" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
-            4
-        </Button>
-        <Button Grid.Column="3" Grid.Row="5" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
-            5
-        </Button>
-        <Button Grid.Column="4" Grid.Row="5" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
-            6
-        </Button>
-        <Button Grid.Column="2" Grid.Row="6" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
-            7
-        </Button>
-        <Button Grid.Column="3" Grid.Row="6" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
-            8
-        </Button>
-        <Button Grid.Column="4" Grid.Row="6" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
-            9
-        </Button>
+        <TextBlock x:Name="TextTest" Grid.Row="2" Grid.Column="2" TextAlignment="Center" FontSize="72" FontFamily="Segoe UI">0000</TextBlock>
+        <!--
+        <Page x:Name="NumberPad" Grid.Row="4" Grid.Column="2">
+            <local:KeyBoard/>
+        </Page>
+        -->
 
-        
-        
+        <Page Grid.Row="4" Grid.Column="2">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
+                    1
+                </Button>
+                <Button Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
+                    2
+                </Button>
+                <Button Grid.Column="2" Grid.Row="0" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
+                    3
+                </Button>
+                <Button Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
+                    4
+                </Button>
+                <Button Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
+                    5
+                </Button>
+                <Button Grid.Column="2" Grid.Row="1" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
+                    6
+                </Button>
+                <Button Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
+                    7
+                </Button>
+                <Button Grid.Column="1" Grid.Row="2" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
+                    8
+                </Button>
+                <Button Grid.Column="2" Grid.Row="2" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
+                    9
+                </Button>
+                <Button Grid.Column="1" Grid.Row="3" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Height="128" Width="128" >
+                    0
+                </Button>
+            </Grid>
+        </Page>
+
+
     </Grid>
 
 
