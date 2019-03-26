@@ -8,6 +8,8 @@ namespace _1A2B.source
         private static int msnTargetUnitsDigit, msnTargetTensDigit, msnTargetHundredsDigit, msnTargetThousandsDigit;//Target number
         private static int msnSubmitUnitsDigit, msnSubmitTensDigit, msnSubmitHundredsDigit, msnSubmitThousandsDigit;//Submitted number
 
+        private int cntEnquire = 0;
+
         public struct Response//the response of submit 
         {
             public int n, nA, nB;//number of A&B
@@ -60,6 +62,11 @@ namespace _1A2B.source
             Random rand = new Random();
             while (!IsValid(a)) { a = rand.Next(10000); };
 
+            msnSubmitUnitsDigit = 0;
+            msnSubmitTensDigit = 0;
+            msnSubmitHundredsDigit = 0;
+            msnSubmitThousandsDigit = 0;
+
             msnTargetUnitsDigit = a % 10; a /= 10;
             msnTargetTensDigit = a % 10; a /= 10;
             msnTargetHundredsDigit = a % 10; a /= 10;
@@ -80,7 +87,13 @@ namespace _1A2B.source
         public int GetGameStatus()
         {
             throw new Exception("待补充");
-            return 0;
+            if (ans.nA == 4 || cntEnquire == 10)
+                return 2;
+            else
+            if (msnTargetThousandsDigit != 0)
+                return 1;
+            else 
+                return 0;
         }
 
 
@@ -144,6 +157,8 @@ namespace _1A2B.source
             if (IsValid(a))
             {
                 Judge(a);
+                stats[++cntEnquire] = ans;//restore the status
+
                 return 0;
             }
             else
