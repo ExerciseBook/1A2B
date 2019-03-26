@@ -37,12 +37,12 @@
         </Grid.RowDefinitions>
 
 
-        <TextBlock x:Name="TextTest" Grid.Row="2" Grid.Column="2" TextAlignment="Center" FontSize="72" FontFamily="Segoe UI">0000</TextBlock>
+        <TextBlock x:Name="TextTest" Grid.Row="2" Grid.Column="2" TextAlignment="Center" FontSize="72" FontFamily="Segoe UI"/>
 
-        <local:KeyBoard x:Name="NumberPad" Grid.Row="4" Grid.Column="2" />
+        <local:KeyBoard x:Name="NumberPad" Grid.Row="4" Grid.Column="2" Loaded="NumberPad_Loaded" />
 
         <ListView Grid.Column="4" Grid.Row="4" x:Name="ListView" >
-
+            <TextBlock Text="2333" />
         </ListView>
         
 

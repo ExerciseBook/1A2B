@@ -19,9 +19,25 @@ namespace _1A2B
 {
     public sealed partial class KeyBoard : UserControl
     {
+
+        private _1A2B.source.InputControl inputControl = null;
+
+        public void setInputControl(_1A2B.source.InputControl aInputControl) {
+            inputControl = aInputControl;
+        }
+
         public KeyBoard()
         {
             this.InitializeComponent();
         }
+
+        private void NumButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button thisButton = (Button)sender;
+            TextBlock content = (TextBlock)thisButton.Content;
+            //throw new Exception(thisButton.Content.GetType().ToString());
+            inputControl.input((_1A2B.source.InputControl.InputType)((int)content.Text[0]-48+1));
+        }
+
     }
 }

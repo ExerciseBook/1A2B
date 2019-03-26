@@ -1,6 +1,6 @@
 ﻿namespace _1A2B.source
 {
-    internal class GameLogic
+    public class GameLogic
     {
 
         private int ans;

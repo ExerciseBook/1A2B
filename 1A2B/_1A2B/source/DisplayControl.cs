@@ -3,7 +3,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace _1A2B.source
 {
-    internal class DisplayControl
+    public class DisplayControl
     {
 
 

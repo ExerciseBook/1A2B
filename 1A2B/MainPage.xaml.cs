@@ -18,9 +18,9 @@ namespace _1A2B
     public sealed partial class MainPage : Page
     {
 
-        _1A2B.source.InputControl inputControl;
-        _1A2B.source.GameLogic gameControl;
-        _1A2B.source.DisplayControl displayControl;
+        private _1A2B.source.InputControl inputControl;
+        private _1A2B.source.GameLogic gameControl;
+        private _1A2B.source.DisplayControl displayControl;
 
 
         public MainPage()
@@ -38,6 +38,9 @@ namespace _1A2B
             
         }
 
-
+        private void NumberPad_Loaded(object sender, RoutedEventArgs e)
+        {
+            NumberPad.setInputControl(inputControl);
+        }
     }
 }

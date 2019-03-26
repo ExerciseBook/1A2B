@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace _1A2B.source
 {
-    class InputControl
+    public class InputControl
     {
 
         public enum InputType { NONE, Num0, Num1, Num2, Num3, Num4, Num5, Num6, Num7, Num8, Num9, Num10, Enter, ESC, Backspace };
@@ -33,7 +33,7 @@ namespace _1A2B.source
             gameControl = aGameControl;
         }
 
-        private void input(InputType a) {
+        public void input(InputType a) {
             if (a == InputType.ESC)
             {
                 inputBuff = new InputType[4];
