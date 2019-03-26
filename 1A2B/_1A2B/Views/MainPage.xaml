@@ -5,6 +5,7 @@
     xmlns:local="using:_1A2B"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:localViews="using:_1A2B.Views"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     MinWidth="1366"
@@ -39,12 +40,11 @@
 
         <TextBlock x:Name="TextTest" Grid.Row="2" Grid.Column="2" TextAlignment="Center" FontSize="72" FontFamily="Segoe UI"/>
 
-        <local:KeyBoard x:Name="NumberPad" Grid.Row="4" Grid.Column="2" Loaded="NumberPad_Loaded" />
+        <localViews:KeyBoard x:Name="NumberPad" Grid.Row="4" Grid.Column="2" Loaded="NumberPad_Loaded" />
 
-        <ListView Grid.Column="4" Grid.Row="4" x:Name="ListView" >
-            <TextBlock Text="2333" />
-        </ListView>
-        
+
+        <localViews:HistoryBoard Grid.Column="4" Grid.Row="4" x:Name="historyBoard"/>
+
 
     </Grid>
 

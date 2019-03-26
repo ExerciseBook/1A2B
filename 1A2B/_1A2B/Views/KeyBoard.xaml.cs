@@ -15,14 +15,14 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace _1A2B
+namespace _1A2B.Views
 {
     public sealed partial class KeyBoard : UserControl
     {
 
-        private _1A2B.source.InputControl inputControl = null;
+        private source.InputControl inputControl = null;
 
-        public void setInputControl(_1A2B.source.InputControl aInputControl) {
+        public void setInputControl(source.InputControl aInputControl) {
             inputControl = aInputControl;
         }
 
@@ -36,7 +36,7 @@ namespace _1A2B
             Button thisButton = (Button)sender;
             TextBlock content = (TextBlock)thisButton.Content;
             //throw new Exception(thisButton.Content.GetType().ToString());
-            inputControl.input((_1A2B.source.InputControl.InputType)((int)content.Text[0]-48+1));
+            inputControl.input((source.InputControl.InputType)((int)content.Text[0]-48+1));
         }
 
     }

@@ -1,0 +1,23 @@
+﻿<UserControl
+    x:Class="_1A2B.Views.HistoryBoard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_1A2B._1A2B.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="List1" Grid.Column="0"/>
+        <ListView x:Name="List2" Grid.Column="2"/>
+
+    </Grid>
+</UserControl>

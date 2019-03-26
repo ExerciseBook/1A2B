@@ -18,21 +18,25 @@ namespace _1A2B
     public sealed partial class MainPage : Page
     {
 
-        private _1A2B.source.InputControl inputControl;
-        private _1A2B.source.GameLogic gameControl;
-        private _1A2B.source.DisplayControl displayControl;
+        private source.InputControl inputControl; 
+        private source.GameLogic gameControl;
+        private source.DisplayControl displayControl;
 
 
         public MainPage()
         {
             this.InitializeComponent();
 
-            inputControl = new _1A2B.source.InputControl();
-            gameControl = new _1A2B.source.GameLogic();
-            displayControl = new _1A2B.source.DisplayControl(TextTest);
+            inputControl = new source.InputControl();
+            gameControl = new source.GameLogic();
+            displayControl = new source.DisplayControl(TextTest);
 
             inputControl.setDisplayControl(displayControl);
             inputControl.setGameControl(gameControl);
+
+            //临时
+            inputControl.historyBoard = historyBoard;
+
 
 
             

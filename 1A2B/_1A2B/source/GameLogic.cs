@@ -86,7 +86,6 @@ namespace _1A2B.source
          */ 
         public int GetGameStatus()
         {
-            throw new Exception("待补充");
             if (ans.nA == 4 || cntEnquire == 10)
                 return 2;
             else
@@ -103,6 +102,8 @@ namespace _1A2B.source
          */
         private void Judge(int a)
         {
+            ans.n = a;
+
             //diverse the number
             msnSubmitUnitsDigit = a % 10; a /= 10;
             msnSubmitTensDigit = a % 10; a /= 10;

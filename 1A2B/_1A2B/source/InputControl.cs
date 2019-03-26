@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _1A2B.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,9 @@ namespace _1A2B.source
 {
     public class InputControl
     {
+        //临时
+        public HistoryBoard historyBoard;
+
 
         public enum InputType { NONE, Num0, Num1, Num2, Num3, Num4, Num5, Num6, Num7, Num8, Num9, Num10, Enter, ESC, Backspace };
 
@@ -47,6 +51,7 @@ namespace _1A2B.source
                     }
 
                     gameControl.submit(number);
+                    historyBoard.Add(inputBuff); // 临时
                     inputBuff = new InputType[4];
                 }
             }
