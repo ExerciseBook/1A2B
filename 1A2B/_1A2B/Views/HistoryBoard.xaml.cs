@@ -1,4 +1,5 @@
-﻿using _1A2B.source;
+﻿using _1A2B._1A2B.Views;
+using _1A2B.source;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -39,8 +40,8 @@ namespace _1A2B.Views
         public void Add(InputControl.InputType[] inputInfo) {
             if (count >= 10) { return; }
 
-            DigitalView newItem = new DigitalView();
-            newItem.MyContent = inputInfo;
+            HistoryItem newItem = new HistoryItem();
+            newItem.TheNumber.MyContent = inputInfo;
 
             if (count < 5) {
                 List1.Items.Add(newItem);
