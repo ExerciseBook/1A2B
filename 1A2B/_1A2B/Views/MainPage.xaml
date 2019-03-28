@@ -38,7 +38,7 @@
         </Grid.RowDefinitions>
 
 
-        <TextBlock x:Name="TextTest" Grid.Row="2" Grid.Column="2" TextAlignment="Center" FontSize="72" FontFamily="Segoe UI"/>
+        <localViews:DigitalView x:Name="InputScreen" Grid.Row="2" Grid.Column="2"/>
 
         <localViews:KeyBoard x:Name="NumberPad" Grid.Row="4" Grid.Column="2" Loaded="NumberPad_Loaded" />
 

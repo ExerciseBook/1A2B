@@ -29,7 +29,8 @@ namespace _1A2B
 
             inputControl = new source.InputControl();
             gameControl = new source.GameLogic();
-            displayControl = new source.DisplayControl(TextTest);
+            displayControl = new source.DisplayControl(InputScreen);
+
 
             inputControl.setDisplayControl(displayControl);
             inputControl.setGameControl(gameControl);

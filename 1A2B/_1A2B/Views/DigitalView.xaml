@@ -6,11 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300"
+    d:DesignHeight="100"
     d:DesignWidth="400">
 
     <Grid>
         <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="10*"/>
@@ -18,19 +19,20 @@
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
 
         <!-- Foreground -->
-        <Button Background="Transparent" x:Name="NumThousand" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0">
+        <Button Background="Transparent" x:Name="NumThousand" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
             <TextBlock TextAlignment="Center" FontSize="48"/> 
         </Button>
-        <Button Background="Transparent" x:Name="NumHundred" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2">
+        <Button Background="Transparent" x:Name="NumHundred" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3">
             <TextBlock TextAlignment="Center" FontSize="48"/>
         </Button>
-        <Button Background="Transparent" x:Name="NumTen" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4">
+        <Button Background="Transparent" x:Name="NumTen" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5">
             <TextBlock TextAlignment="Center" FontSize="48"/>
         </Button>
-        <Button Background="Transparent" x:Name="NumUnit" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="6">
+        <Button Background="Transparent" x:Name="NumUnit" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="7">
             <TextBlock TextAlignment="Center" FontSize="48"/>
         </Button>
         

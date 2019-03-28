@@ -21,6 +21,20 @@ namespace _1A2B.Views
     public sealed partial class DigitalView : UserControl
     {
 
+        static void ContentUpdate(TextBlock textView, InputControl.InputType num ) {
+            int i = (int)num;
+            if ((1 <= i) && (i <= 10))
+            {
+                textView.Text = "" + (Char)(i - 1 + 48);
+            }
+            else
+            {
+                textView.Text = "";
+            };
+
+        }
+
+
         private InputControl.InputType[] Buff = new InputControl.InputType[4];
 
         public InputControl.InputType[] MyContent  {
@@ -28,10 +42,11 @@ namespace _1A2B.Views
             set {
                 Buff = value;
                 if (value.Length == 4) {
-                    ((TextBlock)NumThousand.Content).Text = "" + (Char)(((int)value[0])-1+48) ;
-                    ((TextBlock)NumHundred.Content).Text = "" + (Char)(((int)value[1])-1+48) ;
-                    ((TextBlock)NumTen.Content).Text = "" + (Char)(((int)value[2])-1+48) ;
-                    ((TextBlock)NumUnit.Content).Text = "" + (Char)(((int)value[3])-1+48) ;
+                    ContentUpdate((TextBlock)NumThousand.Content , value[0]);
+                    ContentUpdate((TextBlock)NumHundred.Content , value[1]);
+                    ContentUpdate((TextBlock)NumTen.Content , value[2]);
+                    ContentUpdate((TextBlock)NumUnit.Content , value[3]);
+
                 }
             }
 

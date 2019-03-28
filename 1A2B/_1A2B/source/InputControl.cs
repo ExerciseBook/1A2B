@@ -73,7 +73,7 @@ namespace _1A2B.source
                 }
             }
 
-            displayControl.InputScreen.Text=inputBuff;
+            displayControl.InputScreen.MyContent=inputBuff;
 
             
         }
