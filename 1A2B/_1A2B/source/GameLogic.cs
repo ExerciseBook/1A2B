@@ -88,7 +88,7 @@ namespace _1A2B.source
             msnTargetThousandsDigit = a % 10;
 
             aTargetNumber[msnTargetUnitsDigit] = true;
-            aTargetNumber[msnSubmitTensDigit] = true;
+            aTargetNumber[msnTargetTensDigit] = true;
             aTargetNumber[msnTargetHundredsDigit] = true;
             aTargetNumber[msnTargetThousandsDigit] = true;
         }
@@ -126,7 +126,7 @@ namespace _1A2B.source
         private void Judge(int a)
         {
             ans.n = a;
-
+            ans.nA = ans.nB = 0;
             //diverse the number
             msnSubmitUnitsDigit = a % 10; a /= 10;
             msnSubmitTensDigit = a % 10; a /= 10;
@@ -136,11 +136,11 @@ namespace _1A2B.source
             //calculate the number of B
             if (aTargetNumber[msnSubmitUnitsDigit])
                 ans.nB++;
-            if (aTargetNumber[msnTargetTensDigit])
+            if (aTargetNumber[msnSubmitTensDigit])
                 ans.nB++;
-            if (aTargetNumber[msnTargetHundredsDigit])
+            if (aTargetNumber[msnSubmitHundredsDigit])
                 ans.nB++;
-            if (aTargetNumber[msnTargetThousandsDigit])
+            if (aTargetNumber[msnSubmitThousandsDigit])
                 ans.nB++;
 
             //calculate the number of A
@@ -184,6 +184,8 @@ namespace _1A2B.source
             if (IsValid(a))
             {
                 Judge(a);
+                if (cntEnquire == 10)
+                    GetGameStatus();
                 stats[++cntEnquire] = ans;//restore the status
                 return 0;
             }
