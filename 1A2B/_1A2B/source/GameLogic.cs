@@ -183,7 +183,7 @@ namespace _1A2B.source
 
             //Limit the times of enquire
             if (cntEnquire == 10)
-                GetGameStatus();
+                return -1;
 
             if (IsValid(a))
             {
