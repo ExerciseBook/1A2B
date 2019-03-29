@@ -29,19 +29,13 @@ namespace _1A2B
 
             inputControl = new source.InputControl();
             gameControl = new source.GameLogic();
-            displayControl = new source.DisplayControl(InputScreen);
+            displayControl = new source.DisplayControl(InputScreen,historyBoard);
 
 
             gameControl.Start();
 
             inputControl.setDisplayControl(displayControl);
             inputControl.setGameControl(gameControl);
-
-            //临时
-            inputControl.historyBoard = historyBoard;
-
-
-
             
         }
 

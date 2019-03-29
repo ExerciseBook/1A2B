@@ -12,10 +12,7 @@ namespace _1A2B.source
 {
     public class InputControl
     {
-        //临时
-        public HistoryBoard historyBoard;
-
-
+        
         public enum InputType { NONE, Num0, Num1, Num2, Num3, Num4, Num5, Num6, Num7, Num8, Num9, Num10, Enter, ESC, Backspace };
 
         InputType[] inputBuff = new InputType[4];
@@ -52,9 +49,9 @@ namespace _1A2B.source
                         number += ((int)inputBuff[i] - 1) * Power(10, (3 - i));
                     }
 
-                    if ((gameControl.GetGameStatus() == 1) && (gameControl.submit(number)==0)) { 
-                        
-                        historyBoard.Add(inputBuff,gameControl.LastSubmit);
+                    if ((gameControl.GetGameStatus() == 1) && (gameControl.submit(number)==0)) {
+
+                        displayControl.HistoryBoard.Add(inputBuff,gameControl.LastSubmit);
                         inputBuff = new InputType[4];
                     }
                 }
