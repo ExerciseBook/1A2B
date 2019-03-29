@@ -17,9 +17,10 @@
 
 
     <Grid>
+        <!--:Name="GlassHost"--> 
 
 
-        <Grid.ColumnDefinitions >
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="6*"/>
@@ -38,13 +39,23 @@
         </Grid.RowDefinitions>
 
 
-        <localViews:DigitalView x:Name="InputScreen" Grid.Row="2" Grid.Column="2"/>
-
-        <localViews:KeyBoard x:Name="NumberPad" Grid.Row="4" Grid.Column="2" Loaded="NumberPad_Loaded" />
+        <Grid x:Name="GlassHost" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="6"/>
 
 
-        <localViews:HistoryBoard Grid.Column="4" Grid.Row="4" x:Name="historyBoard"/>
+        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="6" Background="#A0FFFFFF"/>
 
+        <Grid Grid.Row="2" Grid.Column="2" Background="#00000000">
+            <localViews:DigitalView x:Name="InputScreen" />
+        </Grid>
+
+
+        <Grid Grid.Row="4" Grid.Column="2" Background="#00000000">
+            <localViews:KeyBoard x:Name="NumberPad" Loaded="NumberPad_Loaded" />
+        </Grid>
+
+        <Grid Grid.Column="4" Grid.Row="4" Background="#00000000">
+            <localViews:HistoryBoard x:Name="historyBoard"/>
+        </Grid>
 
     </Grid>
 
