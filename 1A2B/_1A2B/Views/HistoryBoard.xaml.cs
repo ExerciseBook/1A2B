@@ -22,7 +22,7 @@ namespace _1A2B.Views
     public sealed partial class HistoryBoard : UserControl
     {
         private int count;
-        public int Count { get => count; set => count = value; }
+        public int Count { get => count; private set => count = value; }
             
         public HistoryBoard()
         {
@@ -37,11 +37,12 @@ namespace _1A2B.Views
         }
 
 
-        public void Add(InputControl.InputType[] inputInfo) {
+        public void Add(InputControl.InputType[] inputInfo,GameLogic.Response AResponse) {
             if (count >= 10) { return; }
 
             HistoryItem newItem = new HistoryItem();
-            newItem.TheNumber.MyContent = inputInfo;
+            newItem.MyContent = inputInfo;
+            newItem.Status = AResponse;
 
             if (count < 5) {
                 List1.Items.Add(newItem);

@@ -43,16 +43,20 @@ namespace _1A2B.source
                 inputBuff = new InputType[4];
             }
             else if (a == InputType.Enter) {
-                if (inputBuff[3] != InputType.NONE) {
+                if (inputBuff[3] != InputType.NONE)
+                {
                     int number = 0;
 
-                    for (int i = 0; i < 4; i++) {
+                    for (int i = 0; i < 4; i++)
+                    {
                         number += ((int)inputBuff[i] - 1) * Power(10, (3 - i));
                     }
 
-                    gameControl.submit(number);
-                    historyBoard.Add(inputBuff); // 临时
-                    inputBuff = new InputType[4];
+                    if ((gameControl.GetGameStatus() == 1) && (gameControl.submit(number)==0)) { 
+                        
+                        historyBoard.Add(inputBuff,gameControl.LastSubmit);
+                        inputBuff = new InputType[4];
+                    }
                 }
             }
             else if (a == InputType.Backspace) {

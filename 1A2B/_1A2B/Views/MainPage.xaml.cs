@@ -32,6 +32,8 @@ namespace _1A2B
             displayControl = new source.DisplayControl(InputScreen);
 
 
+            gameControl.Start();
+
             inputControl.setDisplayControl(displayControl);
             inputControl.setGameControl(gameControl);
 

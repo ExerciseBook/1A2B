@@ -15,24 +15,34 @@ namespace _1A2B.source
             public int n, nA, nB;//number of A&B
         };
 
+        /// <summary>
         /// 用来储存用户的历史提交记录
+        /// </summary>
         public Response[] stats = new Response[10];
 
 
         private Response ans;
 
-        /** 本方法用来判断这个提交是否合法
+        /// <summary>
+        /// 上一次请求的结果
+        /// </summary>
+        public Response LastSubmit { get => ans; }
+
+        /** 
+         * <summary>
+         * 本方法用来判断这个提交是否合法
          * 
          * 根据1A2B的游戏规则，用户提交的四位数必须互不相等，并且不能有前导零
-         *
-         * @param a 需要判断你的数字
+         * </summary>
+         * <param name="a">需要判断你的数字</param>
          * 
-         * @return (true 合法 , false 不合法)
+         * <returns>true 合法 , false 不合法</returns>
          */
         public bool IsValid(int a)
         {
             int[] p = new int[10];
 
+            if (a >= 10000) { return false; }
             if (a < 1000) { return false; }
 
             while (a != 0)
@@ -50,13 +60,18 @@ namespace _1A2B.source
         }
 
 
-        /** 本方法用于进行游戏初始化
+
+        /** 
+         * <summary>
+         * 本方法用于进行游戏初始化
          * 
          * 在游戏开始时本方法会被调用
+         * </summary>
          */
         public void Start()
         {
-            //所有变量的初始化在这里都要丢一份
+            Response[] stats = new Response[10];
+            aTargetNumber = new bool[10];
 
             int a = 0;
             Random rand = new Random();
@@ -79,11 +94,16 @@ namespace _1A2B.source
         }
 
 
-        /** 本方法用于获取游戏当前状态
+
+        /** 
+         * <summary>
+         * 本方法用于获取游戏当前状态
          * 
-         * @return (0 游戏未开始, 1 正在游戏, 2 游戏结束)
+         * 根据1A2B的游戏规则，用户提交的四位数必须互不相等，并且不能有前导零
+         * </summary>
          * 
-         */ 
+         * <returns>0 游戏未开始, 1 正在游戏, 2 游戏结束</returns>
+         */
         public int GetGameStatus()
         {
             if (ans.nA == 4 || cntEnquire == 10)
@@ -96,9 +116,12 @@ namespace _1A2B.source
         }
 
 
-        /** 提交信息判定
+        /** 
+         * <summary>
+         * 提交信息判定
+         * </summary>
          * 
-         * @param a 待判定数值
+         * <param name="a">待判定数值</param>
          */
         private void Judge(int a)
         {
@@ -144,12 +167,15 @@ namespace _1A2B.source
         }
 
 
-        /** 本方法用于提交用户输入的四位数
+        /**
+         * <summary>
+         * 本方法用于提交用户输入的四位数
+         * </summary>
          * 
-         * @param a 用户提交的四位数
+         * <param name="a">用户提交的四位数</param>
          * 
-         * @return (0 正常处理, -1 用户输入不合法)
-         */ 
+         * <return>0 正常处理, -1 用户输入不合法</return>
+         */
         public int submit(int a)
         {
             //用户提交答案尝试的时候这个方法会被调用
@@ -159,7 +185,6 @@ namespace _1A2B.source
             {
                 Judge(a);
                 stats[++cntEnquire] = ans;//restore the status
-
                 return 0;
             }
             else

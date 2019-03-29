@@ -8,18 +8,40 @@
     xmlns:localViews="using:_1A2B.Views"
     mc:Ignorable="d"
     d:DesignHeight="100"
-    d:DesignWidth="500">
+    d:DesignWidth="400">
 
     <Grid>
         <Grid.ColumnDefinitions >
-            <ColumnDefinition Width="53*"/>
-            <ColumnDefinition Width="17*"/>
-            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="12*"/>
+            
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
-
+        
+<!--
         <localViews:DigitalView x:Name="Number" Grid.Column="0" FontFamily="Segoe UI"/>
+-->
+        
+        <Button Background="Transparent" x:Name="NumThousand" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0">
+            <TextBlock TextAlignment="Center" FontSize="48"/>
+        </Button>
+        <Button Background="Transparent" x:Name="NumHundred" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2">
+            <TextBlock TextAlignment="Center" FontSize="48"/>
+        </Button>
+        <Button Background="Transparent" x:Name="NumTen" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4">
+            <TextBlock TextAlignment="Center" FontSize="48"/>
+        </Button>
+        <Button Background="Transparent" x:Name="NumUnit" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="6">
+            <TextBlock TextAlignment="Center" FontSize="48"/>
+        </Button>
 
-        <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2">
+        <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="8">
             <TextBlock x:Name="Result" TextAlignment="Center" FontSize="48"/>
         </Button>
         

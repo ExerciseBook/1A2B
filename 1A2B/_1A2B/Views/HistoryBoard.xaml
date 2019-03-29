@@ -16,8 +16,8 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
 
-        <ListView x:Name="List1" Grid.Column="0"/>
-        <ListView x:Name="List2" Grid.Column="2"/>
+        <ListView x:Name="List1" Grid.Column="0" HorizontalContentAlignment="Stretch"/>
+        <ListView x:Name="List2" Grid.Column="2" HorizontalContentAlignment="Stretch"/>
 
     </Grid>
 </UserControl>
