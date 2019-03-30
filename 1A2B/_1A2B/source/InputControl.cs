@@ -17,21 +17,8 @@ namespace _1A2B.source
 
         InputType[] inputBuff = new InputType[4];
 
-
-        DisplayControl displayControl;
-        GameLogic gameControl;
-
-
         public InputControl() {
             Window.Current.CoreWindow.KeyDown += onKeydown;
-        }
-
-        public void setDisplayControl(DisplayControl aDisplayControl) {
-            displayControl = aDisplayControl;
-        }
-
-        public void setGameControl(GameLogic aGameControl) {
-            gameControl = aGameControl;
         }
 
         public void input(InputType a) {
@@ -49,9 +36,9 @@ namespace _1A2B.source
                         number += ((int)inputBuff[i] - 1) * Power(10, (3 - i));
                     }
 
-                    if ((gameControl.GetGameStatus() == 1) && (gameControl.submit(number)==0)) {
+                    if ((Core.gameControl.GetGameStatus() == 1) && (Core.gameControl.submit(number)==0)) {
 
-                        displayControl.HistoryBoard.Add(inputBuff,gameControl.LastSubmit);
+                        Core.displayControl.HistoryBoard.Add(inputBuff, Core.gameControl.LastSubmit);
                         inputBuff = new InputType[4];
                     }
                 }
@@ -74,7 +61,7 @@ namespace _1A2B.source
                 }
             }
 
-            displayControl.InputScreen.MyContent=inputBuff;
+            Core.displayControl.InputScreen.MyContent=inputBuff;
 
             
         }

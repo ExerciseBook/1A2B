@@ -1,5 +1,4 @@
-﻿using _1A2B._1A2B.Views;
-using _1A2B.source;
+﻿using _1A2B.source;
 using System;
 using System.Collections.Generic;
 using System.IO;

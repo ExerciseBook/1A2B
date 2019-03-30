@@ -11,9 +11,9 @@
 
     <Grid>
         <Grid.ColumnDefinitions >
-            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
 
         <ListView x:Name="List1" Grid.Column="0" HorizontalContentAlignment="Stretch"/>

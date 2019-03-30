@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="_1A2B\source\Core.cs" />
     <Compile Include="_1A2B\Views\DigitalView.xaml.cs">
       <DependentUpon>DigitalView.xaml</DependentUpon>
     </Compile>
@@ -137,6 +138,9 @@
     <Compile Include="_1A2B\source\GameLogic.cs" />
     <Compile Include="_1A2B\Views\KeyBoard.xaml.cs">
       <DependentUpon>KeyBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="_1A2B\Views\SingleButton.xaml.cs">
+      <DependentUpon>SingleButton.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +181,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="_1A2B\Views\KeyBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_1A2B\Views\SingleButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _1A2B.source;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,11 +18,23 @@ using Windows.UI.Xaml.Navigation;
 
 namespace _1A2B.Views
 {
-    public sealed partial class KeyBoard : UserControl
+    public sealed partial class SingleButton : UserControl
     {
-        public KeyBoard()
+        public int ThisValue { get; set; }
+
+        public string ThisContent { get => MyContent.Text; set {
+                MyContent.Text = value;
+            } }
+
+
+        public SingleButton()
         {
             this.InitializeComponent();
+        }
+
+        private void onClick(object sender, RoutedEventArgs e)
+        {
+            Core.inputControl.input((source.InputControl.InputType)(ThisValue + 1));
         }
     }
 }

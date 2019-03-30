@@ -11,6 +11,7 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Hosting;
 using Windows.UI.Composition;
 using Windows.UI;
+using _1A2B.source;
 
 // https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
 
@@ -22,32 +23,17 @@ namespace _1A2B
     public sealed partial class MainPage : Page
     {
 
-        private source.InputControl inputControl; 
-        private source.GameLogic gameControl;
-        private source.DisplayControl displayControl;
-
-
         public MainPage()
         {
             this.InitializeComponent();
 
             InitializeFrostedGlass_All();
-            
-            inputControl = new source.InputControl();
-            gameControl = new source.GameLogic();
-            displayControl = new source.DisplayControl(InputScreen,historyBoard);
 
+            Core.inputControl = new source.InputControl();
+            Core.gameControl = new source.GameLogic();
+            Core.displayControl = new source.DisplayControl(InputScreen,historyBoard);
 
-            gameControl.Start();
-
-            inputControl.setDisplayControl(displayControl);
-            inputControl.setGameControl(gameControl);
-            
-        }
-
-        private void NumberPad_Loaded(object sender, RoutedEventArgs e)
-        {
-            NumberPad.setInputControl(inputControl);
+            Core.gameControl.Start();   
         }
 
         private void InitializeFrostedGlass_All() {

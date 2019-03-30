@@ -188,7 +188,7 @@ namespace _1A2B.source
             if (IsValid(a))
             {
                 Judge(a);
-                stats[++cntEnquire] = ans;//restore the status
+                stats[cntEnquire++] = ans;//restore the status
                 return 0;
             }
             else
