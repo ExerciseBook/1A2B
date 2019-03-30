@@ -20,7 +20,12 @@ namespace _1A2B.Views
 {
     public sealed partial class SingleButton : UserControl
     {
-        public int ThisValue { get; set; }
+        public InputControl.InputType ThisValue { get; set; }
+        public double ThisFontSize {
+            get => MyContent.FontSize;
+            set {
+                MyContent.FontSize = value;
+            } }
 
         public string ThisContent { get => MyContent.Text; set {
                 MyContent.Text = value;
@@ -34,7 +39,7 @@ namespace _1A2B.Views
 
         private void onClick(object sender, RoutedEventArgs e)
         {
-            Core.inputControl.input((source.InputControl.InputType)(ThisValue + 1));
+            Core.inputControl.Input(ThisValue);
         }
     }
 }

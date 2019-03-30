@@ -15,13 +15,26 @@ namespace _1A2B.source
         
         public enum InputType { NONE, Num0, Num1, Num2, Num3, Num4, Num5, Num6, Num7, Num8, Num9, Num10, Enter, ESC, Backspace };
 
+        /// <summary>
+        /// 输入屏幕的内容
+        /// </summary>
         InputType[] inputBuff = new InputType[4];
 
+        /// <summary>
+        /// 构造函数 : 绑定按键侦听事件
+        /// </summary>
         public InputControl() {
             Window.Current.CoreWindow.KeyDown += onKeydown;
         }
 
-        public void input(InputType a) {
+        public void Input(InputType a) {
+
+            if (Core.gameControl.GetGameStatus() != 1) {
+                Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_HavntStart");
+                return;
+            }
+
+
             if (a == InputType.ESC)
             {
                 inputBuff = new InputType[4];
@@ -60,10 +73,7 @@ namespace _1A2B.source
                     inputBuff[i] = a;
                 }
             }
-
             Core.displayControl.InputScreen.MyContent=inputBuff;
-
-            
         }
 
         private int Power(int Base, int Kick)
@@ -89,33 +99,37 @@ namespace _1A2B.source
             switch (e.VirtualKey.GetHashCode())
             {
                 case 96:
-                case 48: { input(InputType.Num0); break; }
+                case 48: { Input(InputType.Num0); break; }
                 case 97:
-                case 49: { input(InputType.Num1); break; }
+                case 49: { Input(InputType.Num1); break; }
                 case 98:
-                case 50: { input(InputType.Num2); break; }
+                case 50: { Input(InputType.Num2); break; }
                 case 99:
-                case 51: { input(InputType.Num3); break; }
+                case 51: { Input(InputType.Num3); break; }
                 case 100:
-                case 52: { input(InputType.Num4); break; }
+                case 52: { Input(InputType.Num4); break; }
                 case 101:
-                case 53: { input(InputType.Num5); break; }
+                case 53: { Input(InputType.Num5); break; }
                 case 102:
-                case 54: { input(InputType.Num6); break; }
+                case 54: { Input(InputType.Num6); break; }
                 case 103:
-                case 55: { input(InputType.Num7); break; }
+                case 55: { Input(InputType.Num7); break; }
                 case 104:
-                case 56: { input(InputType.Num8); break; }
+                case 56: { Input(InputType.Num8); break; }
                 case 105:
-                case 57: { input(InputType.Num9); break; }
+                case 57: { Input(InputType.Num9); break; }
                 case 10:
-                case 13: { input(InputType.Enter); break; }
-                case 27: { input(InputType.ESC); break; }
-                case 8: { input(InputType.Backspace); break; }
+                case 13: { Input(InputType.Enter); break; }
+                case 27: { Input(InputType.ESC); break; }
+                case 8: { Input(InputType.Backspace); break; }
                 //default: throw new Exception(e.VirtualKey.GetHashCode().ToString());
 
             }
 
+        }
+
+        public void ClearBuff() {
+            InputType[] inputBuff = new InputType[4];
         }
 
     }

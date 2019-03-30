@@ -31,9 +31,8 @@ namespace _1A2B
 
             Core.inputControl = new source.InputControl();
             Core.gameControl = new source.GameLogic();
-            Core.displayControl = new source.DisplayControl(InputScreen,historyBoard);
+            Core.displayControl = new source.DisplayControl(InputScreen,historyBoard, NoticeBlock);
 
-            Core.gameControl.Start();   
         }
 
         private void InitializeFrostedGlass_All() {
@@ -60,5 +59,30 @@ namespace _1A2B
             bindSizeAnimation.SetReferenceParameter("hostVisual", hostVisual);
             glassVisual.StartAnimation("Size", bindSizeAnimation);
         }
+
+        private void Button_StartGame(object sender, RoutedEventArgs e)
+        {
+            if (Core.gameControl.GetGameStatus() != 1)
+            {
+                Core.CoreControl.Start();
+            }
+            else {
+                Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_AlreadyStart");
+            }
+        }
+
+        private void Button_RestartGame(object sender, RoutedEventArgs e)
+        {
+            if (Core.gameControl.GetGameStatus() != 1)
+            {
+                Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_HavntStart");
+            }
+            else
+            {
+                Core.CoreControl.Start();
+                Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_Game_Restart");
+            }
+        }
+
     }
 }

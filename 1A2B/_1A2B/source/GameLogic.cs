@@ -98,8 +98,6 @@ namespace _1A2B.source
         /** 
          * <summary>
          * 本方法用于获取游戏当前状态
-         * 
-         * 根据1A2B的游戏规则，用户提交的四位数必须互不相等，并且不能有前导零
          * </summary>
          * 
          * <returns>0 游戏未开始, 1 正在游戏, 2 游戏结束</returns>
@@ -166,6 +164,13 @@ namespace _1A2B.source
             }
         }
 
+        /// <summary>
+        /// 在玩家失败时显示正确答案
+        /// </summary>
+        /// <returns>返回的正确答案</returns>
+        private string GetAns() {
+            return "0000";
+        }
 
         /**
          * <summary>
@@ -189,6 +194,20 @@ namespace _1A2B.source
             {
                 Judge(a);
                 stats[cntEnquire++] = ans;//restore the status
+
+                if (ans.nA == 4)
+                {
+                    Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_Game_End_Win");
+                }
+                else
+                if (cntEnquire == 10)
+                {
+                    Core.displayControl.NoticeBlock.PrintPlain(Core.resourceLoader.GetString("NoticeBlock_Info_Game_End_Lost").Replace("%ANSWER%", GetAns()));
+                }
+                else {
+                    Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_Ready");
+                }
+
                 return 0;
             }
             else
