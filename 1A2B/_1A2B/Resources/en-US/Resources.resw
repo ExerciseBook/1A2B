@@ -119,50 +119,66 @@
   </resheader>
   <data name="NoticeBlock_Info_AlreadyStart" xml:space="preserve">
     <value>The game is already started.</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏已经开始了不需要再按开始按钮了</comment>
   </data>
   <data name="NoticeBlock_Info_Game_End_Lost" xml:space="preserve">
     <value>Oh, the answer is %ANSWER%.</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏结束 题目未解出提示</comment>
   </data>
   <data name="NoticeBlock_Info_Game_End_Win" xml:space="preserve">
     <value>You Work Out The Problem!</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏结束 题目解出提示</comment>
   </data>
   <data name="NoticeBlock_Info_Game_Restart" xml:space="preserve">
     <value>You started a new game.</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏重置提示</comment>
   </data>
   <data name="NoticeBlock_Info_Game_Start" xml:space="preserve">
     <value>Game Started !</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏开始提示</comment>
   </data>
   <data name="NoticeBlock_Info_HavntStart" xml:space="preserve">
     <value>The game havn't start. Please click the Start button above.</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误</comment>
   </data>
   <data name="NoticeBlock_Info_Ready" xml:space="preserve">
     <value>Done.</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 等待下一个指令</comment>
   </data>
   <data name="UI_Keyboard_Button_Backspace.ThisContent" xml:space="preserve">
     <value>BackSpace</value>
+    <comment>界面 | 虚拟键盘 | 退格键 | 文字内容</comment>
   </data>
   <data name="UI_Keyboard_Button_Backspace.ThisFontSize" xml:space="preserve">
-    <value>12</value>
+    <value>18</value>
+    <comment>界面 | 虚拟键盘 | 退格键 | 字体大小</comment>
   </data>
   <data name="UI_Keyboard_Button_Enter.ThisContent" xml:space="preserve">
     <value>Enter</value>
+    <comment>界面 | 虚拟键盘 | 回车键 | 文字内容</comment>
   </data>
   <data name="UI_Keyboard_Button_Enter.ThisFontSize" xml:space="preserve">
     <value>24</value>
+    <comment>界面 | 虚拟键盘 | 回车键 | 字体大小</comment>
   </data>
   <data name="UI_Menu_Restart.FontSize" xml:space="preserve">
     <value>18</value>
+    <comment>界面 | 游戏菜单 | 重置按钮 | 字体大小</comment>
   </data>
   <data name="UI_Menu_Restart.Text" xml:space="preserve">
     <value>Restart</value>
+    <comment>界面 | 游戏菜单 | 重置按钮 | 文字内容</comment>
   </data>
   <data name="UI_Menu_Start.FontSize" xml:space="preserve">
     <value>18</value>
+    <comment>界面 | 游戏菜单 | 开始按钮 | 字体大小</comment>
   </data>
   <data name="UI_Menu_Start.Text" xml:space="preserve">
     <value>Start</value>
+    <comment>界面 | 游戏菜单 | 开始按钮 | 文字内容</comment>
   </data>
   <data name="UI_NoticeBlock.FontSize" xml:space="preserve">
     <value>22</value>
+    <comment>界面 | 游戏状态 | 字体大小</comment>
   </data>
 </root>
