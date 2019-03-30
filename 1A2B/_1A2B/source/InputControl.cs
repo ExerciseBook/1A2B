@@ -29,8 +29,10 @@ namespace _1A2B.source
 
         public void Input(InputType a) {
 
-            if (Core.gameControl.GetGameStatus() != 1) {
+            if (Core.gameControl.GetGameStatus() == 0)
+            {
                 Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_HavntStart");
+
                 return;
             }
 
