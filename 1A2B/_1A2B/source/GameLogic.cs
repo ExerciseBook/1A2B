@@ -8,7 +8,7 @@ namespace _1A2B.source
         private static int msnTargetUnitsDigit, msnTargetTensDigit, msnTargetHundredsDigit, msnTargetThousandsDigit;//Target number
         private static int msnSubmitUnitsDigit, msnSubmitTensDigit, msnSubmitHundredsDigit, msnSubmitThousandsDigit;//Submitted number
 
-        private int cntEnquire = 0;
+        private int cntEnquire;
 
         public struct Response//the response of submit 
         {
@@ -72,6 +72,8 @@ namespace _1A2B.source
         {
             Response[] stats = new Response[10];
             aTargetNumber = new bool[10];
+
+            cntEnquire = 0;
 
             int a = 0;
             Random rand = new Random();
@@ -168,16 +170,10 @@ namespace _1A2B.source
         /// 在玩家失败时显示正确答案
         /// </summary>
         /// <returns>返回的正确答案</returns>
-        /// There is still something wrong with this function.
-        private string GetAns() {
-            string strAns = null;
-            char cTargetUnitsDigit, cTargetTensDigit, cTargetHundredsDigit, cTargetThousandsDigit;
-            cTargetUnitsDigit = (char)(msnTargetUnitsDigit + '0');
-            cTargetTensDigit = (char)(msnTargetTensDigit + '0');
-            cTargetHundredsDigit = (char)(msnTargetHundredsDigit + '0');
-            cTargetThousandsDigit = (char)(msnTargetThousandsDigit + '0');
-            strAns += cTargetThousandsDigit + cTargetHundredsDigit + cTargetTensDigit + cTargetUnitsDigit;
-            return strAns;
+
+        private int GetAns()
+        {
+            return msnTargetThousandsDigit * 1000 + msnTargetHundredsDigit * 100 + msnTargetTensDigit * 10 + msnTargetUnitsDigit;
         }
 
         /**
@@ -210,7 +206,7 @@ namespace _1A2B.source
                 else
                 if (cntEnquire == 10)
                 {
-                    Core.displayControl.NoticeBlock.PrintPlain(Core.resourceLoader.GetString("NoticeBlock_Info_Game_End_Lost").Replace("%ANSWER%", GetAns()));
+                    Core.displayControl.NoticeBlock.PrintPlain(Core.resourceLoader.GetString("NoticeBlock_Info_Game_End_Lost").Replace("%ANSWER%", ""+GetAns()));
                 }
                 else {
                     Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_Ready");
