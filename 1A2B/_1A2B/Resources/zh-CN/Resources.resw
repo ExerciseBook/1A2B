@@ -117,32 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="NoticeBlock_Info_AlreadyStart" xml:space="preserve">
+    <value>游戏已开始</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏已经开始了不需要再按开始按钮了</comment>
+  </data>
   <data name="NoticeBlock_Info_Game_End_Lost" xml:space="preserve">
-    <value>Oh, the answer is %ANSWER%.</value>
+    <value>草，答案竟然是。。。 %ANSWER% ！！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏结束 题目未解出提示</comment>
   </data>
   <data name="NoticeBlock_Info_Game_End_Win" xml:space="preserve">
-    <value>You Work Out The Problem!</value>
+    <value>你果然是个奆，太强了！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏结束 题目解出提示</comment>
   </data>
   <data name="NoticeBlock_Info_Game_Restart" xml:space="preserve">
-    <value>You started a new game.</value>
+    <value>游戏重新开始</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏重置提示</comment>
   </data>
   <data name="NoticeBlock_Info_Game_Start" xml:space="preserve">
-    <value>Game Started !</value>
+    <value>！游戏开始了！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏开始提示</comment>
   </data>
   <data name="NoticeBlock_Info_HavntStart" xml:space="preserve">
-    <value>The game havn't start. Please click the Start button above.</value>
+    <value>游戏还没开始喔~点一下“开始”键叭！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误</comment>
   </data>
   <data name="NoticeBlock_Info_Ready" xml:space="preserve">
-    <value>Done.</value>
+    <value>一切就绪</value>
     <comment>界面 | 游戏状态 | 输出内容 | 等待下一个指令</comment>
   </data>
   <data name="UI_Keyboard_Button_Backspace.ThisContent" xml:space="preserve">
-    <value>BackSpace</value>
+    <value>撤销</value>
     <comment>界面 | 虚拟键盘 | 退格键 | 文字内容</comment>
   </data>
   <data name="UI_Keyboard_Button_Backspace.ThisFontSize" xml:space="preserve">
@@ -150,7 +154,7 @@
     <comment>界面 | 虚拟键盘 | 退格键 | 字体大小</comment>
   </data>
   <data name="UI_Keyboard_Button_Enter.ThisContent" xml:space="preserve">
-    <value>Enter</value>
+    <value>确认</value>
     <comment>界面 | 虚拟键盘 | 回车键 | 文字内容</comment>
   </data>
   <data name="UI_Keyboard_Button_Enter.ThisFontSize" xml:space="preserve">
@@ -162,7 +166,7 @@
     <comment>界面 | 游戏菜单 | 重置按钮 | 字体大小</comment>
   </data>
   <data name="UI_Menu_Restart.Text" xml:space="preserve">
-    <value>Restart</value>
+    <value>重新开始</value>
     <comment>界面 | 游戏菜单 | 重置按钮 | 文字内容</comment>
   </data>
   <data name="UI_Menu_Start.FontSize" xml:space="preserve">
@@ -170,7 +174,7 @@
     <comment>界面 | 游戏菜单 | 开始按钮 | 字体大小</comment>
   </data>
   <data name="UI_Menu_Start.Text" xml:space="preserve">
-    <value>Start</value>
+    <value>开始</value>
     <comment>界面 | 游戏菜单 | 开始按钮 | 文字内容</comment>
   </data>
   <data name="UI_NoticeBlock.FontSize" xml:space="preserve">

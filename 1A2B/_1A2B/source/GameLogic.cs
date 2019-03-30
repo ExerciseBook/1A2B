@@ -168,8 +168,16 @@ namespace _1A2B.source
         /// 在玩家失败时显示正确答案
         /// </summary>
         /// <returns>返回的正确答案</returns>
+        /// There is still something wrong with this function.
         private string GetAns() {
-            return "0000";
+            string strAns = null;
+            char cTargetUnitsDigit, cTargetTensDigit, cTargetHundredsDigit, cTargetThousandsDigit;
+            cTargetUnitsDigit = (char)(msnTargetUnitsDigit + '0');
+            cTargetTensDigit = (char)(msnTargetTensDigit + '0');
+            cTargetHundredsDigit = (char)(msnTargetHundredsDigit + '0');
+            cTargetThousandsDigit = (char)(msnTargetThousandsDigit + '0');
+            strAns += cTargetThousandsDigit + cTargetHundredsDigit + cTargetTensDigit + cTargetUnitsDigit;
+            return strAns;
         }
 
         /**
