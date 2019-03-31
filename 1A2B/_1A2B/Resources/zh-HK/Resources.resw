@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NoticeBlock_Error_StartWithZero" xml:space="preserve">
+    <value>千位數是不可以出現零了辣~</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 错误 | 前导零</comment>
+  </data>
+  <data name="NoticeBlock_Info_AlreadyStart" xml:space="preserve">
+    <value>遊戲已開始惹，再戳這個按鈕就要爆惹</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏已经开始了不需要再按开始按钮了</comment>
+  </data>
+  <data name="NoticeBlock_Info_Game_End_Lost" xml:space="preserve">
+    <value>啊！答案竟然是。。。 %ANSWER% ！！</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏结束 题目未解出提示</comment>
+  </data>
+  <data name="NoticeBlock_Info_Game_End_Win" xml:space="preserve">
+    <value>太勁了！答案就是 %ANSWER%！！</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏结束 题目解出提示</comment>
+  </data>
+  <data name="NoticeBlock_Info_Game_Restart" xml:space="preserve">
+    <value>遊戲重新開始</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏重置提示</comment>
+  </data>
+  <data name="NoticeBlock_Info_Game_Start" xml:space="preserve">
+    <value>遊戲開始了！</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏开始提示</comment>
+  </data>
+  <data name="NoticeBlock_Info_HavntStart" xml:space="preserve">
+    <value>遊戲還沒開始喔~點一下「開始遊戲」鍵叭！</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误</comment>
+  </data>
+  <data name="NoticeBlock_Info_HavntStart_WithAnswer_Lost" xml:space="preserve">
+    <value>答案竟然是。。。 %ANSWER% ！！
+我不服！我要重來！</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 (带答案) (失败)</comment>
+  </data>
+  <data name="NoticeBlock_Info_HavntStart_WithAnswer_Win" xml:space="preserve">
+    <value>太勁了！答案就是 %ANSWER%！！
+這個遊戲太好玩力！我要再玩一次！</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 (带答案) (成功)</comment>
+  </data>
+  <data name="NoticeBlock_Info_HavntStart_WithGuide" xml:space="preserve">
+    <value>上一局遊戲已經結束惹~ 點一下旁邊的 「開始遊戲」 鍵重新開始叭。</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 指引点击开始游戏</comment>
+  </data>
+  <data name="NoticeBlock_Info_Ready" xml:space="preserve">
+    <value>一切就緒</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 等待下一个指令</comment>
+  </data>
+  <data name="UI_Keyboard_Button_Backspace.ThisContent" xml:space="preserve">
+    <value>撤銷</value>
+    <comment>界面 | 虚拟键盘 | 退格键 | 文字内容</comment>
+  </data>
+  <data name="UI_Keyboard_Button_Backspace.ThisFontSize" xml:space="preserve">
+    <value>24</value>
+    <comment>界面 | 虚拟键盘 | 退格键 | 字体大小</comment>
+  </data>
+  <data name="UI_Keyboard_Button_Enter.ThisContent" xml:space="preserve">
+    <value>確認</value>
+    <comment>界面 | 虚拟键盘 | 回车键 | 文字内容</comment>
+  </data>
+  <data name="UI_Keyboard_Button_Enter.ThisFontSize" xml:space="preserve">
+    <value>24</value>
+    <comment>界面 | 虚拟键盘 | 回车键 | 字体大小</comment>
+  </data>
+  <data name="UI_Menu_Restart.FontSize" xml:space="preserve">
+    <value>18</value>
+    <comment>界面 | 游戏菜单 | 重置按钮 | 字体大小</comment>
+  </data>
+  <data name="UI_Menu_Restart.Text" xml:space="preserve">
+    <value>重新開始</value>
+    <comment>界面 | 游戏菜单 | 重置按钮 | 文字内容</comment>
+  </data>
+  <data name="UI_Menu_Start.FontSize" xml:space="preserve">
+    <value>18</value>
+    <comment>界面 | 游戏菜单 | 开始按钮 | 字体大小</comment>
+  </data>
+  <data name="UI_Menu_Start.Text" xml:space="preserve">
+    <value>開始遊戲</value>
+    <comment>界面 | 游戏菜单 | 开始按钮 | 文字内容</comment>
+  </data>
+  <data name="UI_NoticeBlock.FontSize" xml:space="preserve">
+    <value>22</value>
+    <comment>界面 | 游戏状态 | 字体大小</comment>
+  </data>
+</root>
