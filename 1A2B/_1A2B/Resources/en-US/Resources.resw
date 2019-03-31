@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="NoticeBlock_Error_StartWithZero" xml:space="preserve">
+    <value>Zero is not allow at the start of the number.</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 错误 | 前导零</comment>
+  </data>
   <data name="NoticeBlock_Info_AlreadyStart" xml:space="preserve">
     <value>The game is already started.</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏已经开始了不需要再按开始按钮了</comment>
@@ -150,6 +154,10 @@ If you want another try, click the start button.</value>
     <value>You Work Out The Problem! The answer is %ANSWER%.
 If you want another try, click the start button.</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 (带答案) (成功)</comment>
+  </data>
+  <data name="NoticeBlock_Info_HavntStart_WithGuide" xml:space="preserve">
+    <value>Click the Startt button to start a new game.</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 指引点击开始游戏</comment>
   </data>
   <data name="NoticeBlock_Info_Ready" xml:space="preserve">
     <value>Done.</value>

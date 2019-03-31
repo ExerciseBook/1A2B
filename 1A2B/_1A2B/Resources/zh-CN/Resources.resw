@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="NoticeBlock_Error_StartWithZero" xml:space="preserve">
+    <value>千位数是不可以出现零了辣~</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 错误 | 前导零</comment>
+  </data>
   <data name="NoticeBlock_Info_AlreadyStart" xml:space="preserve">
     <value>游戏已开始惹，再戳这个按钮就要爆惹</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏已经开始了不需要再按开始按钮了</comment>
@@ -138,7 +142,7 @@
     <comment>界面 | 游戏状态 | 输出内容 | 游戏开始提示</comment>
   </data>
   <data name="NoticeBlock_Info_HavntStart" xml:space="preserve">
-    <value>游戏还没开始喔~点一下“开始”键叭！</value>
+    <value>游戏还没开始喔~点一下“开始游戏”键叭！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误</comment>
   </data>
   <data name="NoticeBlock_Info_HavntStart_WithAnswer_Lost" xml:space="preserve">
@@ -150,6 +154,10 @@
     <value>你果然是个奆，太强了！答案就是 %ANSWER%！！
 这个游戏太好玩力！我要再玩一次！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 (带答案) (成功)</comment>
+  </data>
+  <data name="NoticeBlock_Info_HavntStart_WithGuide" xml:space="preserve">
+    <value>上一局游戏已经结束惹~ 点一下旁边的 “开始游戏” 键重新开始叭。</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 指引点击开始游戏</comment>
   </data>
   <data name="NoticeBlock_Info_Ready" xml:space="preserve">
     <value>一切就绪</value>
@@ -184,7 +192,7 @@
     <comment>界面 | 游戏菜单 | 开始按钮 | 字体大小</comment>
   </data>
   <data name="UI_Menu_Start.Text" xml:space="preserve">
-    <value>新开游戏</value>
+    <value>开始游戏</value>
     <comment>界面 | 游戏菜单 | 开始按钮 | 文字内容</comment>
   </data>
   <data name="UI_NoticeBlock.FontSize" xml:space="preserve">

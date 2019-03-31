@@ -75,7 +75,7 @@ namespace _1A2B
         {
             if (Core.gameControl.GetGameStatus() != 1)
             {
-                Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_HavntStart");
+                Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_HavntStart_WithGuide");
             }
             else
             {

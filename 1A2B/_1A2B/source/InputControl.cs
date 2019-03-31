@@ -81,7 +81,14 @@ namespace _1A2B.source
                 {
                     int i = 0;
                     while (inputBuff[i] != InputType.NONE) i++;
-                    inputBuff[i] = a;
+
+                    if ((i == 0) && (a == InputType.Num0)) {
+                        Core.displayControl.NoticeBlock.Print("NoticeBlock_Error_StartWithZero");
+                    }
+                    else
+                    { 
+                        inputBuff[i] = a;
+                    }
                 }
             }
             Core.displayControl.InputScreen.MyContent=inputBuff;
