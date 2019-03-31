@@ -28,16 +28,14 @@ namespace _1A2B.source
         /// </summary>
         public Response LastSubmit { get => ans; }
 
-        /** 
-         * <summary>
-         * 本方法用来判断这个提交是否合法
-         * 
-         * 根据1A2B的游戏规则，用户提交的四位数必须互不相等，并且不能有前导零
-         * </summary>
-         * <param name="a">需要判断你的数字</param>
-         * 
-         * <returns>true 合法 , false 不合法</returns>
-         */
+
+
+        /// <summary>
+        /// 本方法用来判断这个提交是否合法
+        /// 根据1A2B的游戏规则，用户提交的四位数必须互不相等，并且不能有前导零
+        /// </summary>
+        /// <param name="a">需要判断你的数字</param>
+        /// <returns>true 合法 , false 不合法</returns>
         public bool IsValid(int a)
         {
             int[] p = new int[10];
@@ -59,15 +57,38 @@ namespace _1A2B.source
             return true;
         }
 
+        /// <summary>
+        /// 为什么这个输入不合法
+        /// </summary>
+        /// <param name="a">需要判断你的数字</param>
+        /// <returns>0 合法, 1 过小, 2 过大, 3 包含重复数字</returns>
+        public int WhyInvalid(int a)
+        {
+            int[] p = new int[10];
+
+            if (a >= 10000) { return 2; }
+            if (a < 1000) { return 1; }
+
+            while (a != 0)
+            {
+                int b = a % 10;
+                p[b]++;
+                if (p[b] > 1)
+                {
+                    return 3;
+                }
+                a = a / 10;
+            }
+
+            return 0;
+        }
 
 
-        /** 
-         * <summary>
-         * 本方法用于进行游戏初始化
-         * 
-         * 在游戏开始时本方法会被调用
-         * </summary>
-         */
+        /// <summary>
+        /// 本方法用于进行游戏初始化
+        /// 
+        /// 在游戏开始时本方法会被调用
+        /// </summary>
         public void Start()
         {
             Response[] stats = new Response[10];
@@ -99,15 +120,10 @@ namespace _1A2B.source
             aTargetNumber[msnTargetThousandsDigit] = true;
         }
 
-
-
-        /** 
-         * <summary>
-         * 本方法用于获取游戏当前状态
-         * </summary>
-         * 
-         * <returns>0 游戏未开始, 1 正在游戏, 2 游戏胜利, 3 游戏失败</returns>
-         */
+        /// <summary>
+        /// 本方法用于获取游戏当前状态
+        /// </summary>
+        /// <returns>0 游戏未开始, 1 正在游戏, 2 游戏胜利, 3 游戏失败</returns>
         public int GetGameStatus()
         {
             if (ans.nA == 4)
@@ -122,13 +138,10 @@ namespace _1A2B.source
         }
 
 
-        /** 
-         * <summary>
-         * 提交信息判定
-         * </summary>
-         * 
-         * <param name="a">待判定数值</param>
-         */
+        /// <summary>
+        /// 提交信息判定
+        /// </summary>
+        /// <param name="a">待判定数字</param>
         private void Judge(int a)
         {
             ans.n = a;
@@ -172,26 +185,20 @@ namespace _1A2B.source
             }
         }
 
-        /**
-         * <summary>
-         * 在玩家失败时显示正确答案
-         * </summary>
-         * <returns>返回的正确答案</returns>
-         */
+        /// <summary>
+        /// 获取正确答案
+        /// </summary>
+        /// <returns>正确答案</returns>
         public int GetAns()
         {
             return msnTargetThousandsDigit * 1000 + msnTargetHundredsDigit * 100 + msnTargetTensDigit * 10 + msnTargetUnitsDigit;
         }
 
-        /**
-         * <summary>
-         * 本方法用于提交用户输入的四位数
-         * </summary>
-         * 
-         * <param name="a">用户提交的四位数</param>
-         * 
-         * <return>0 正常处理, -1 用户输入不合法</return>
-         */
+        /// <summary>
+        /// 本方法用于提交用户输入的四位数
+        /// </summary>
+        /// <param name="a">用户输入的四位数</param>
+        /// <returns>0 正常处理, -1 处理失败</returns>
         public int submit(int a)
         {
             //用户提交答案尝试的时候这个方法会被调用

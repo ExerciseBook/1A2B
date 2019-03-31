@@ -29,16 +29,20 @@ namespace _1A2B
 
             InitializeFrostedGlass_All();
 
+            //将三个控件绑定到全局静态变量
             Core.inputControl = new source.InputControl();
             Core.gameControl = new source.GameLogic();
             Core.displayControl = new source.DisplayControl(InputScreen,historyBoard, NoticeBlock);
-
         }
 
-        private void InitializeFrostedGlass_All() {
+        /// <summary>
+        /// 标题栏特效
+        /// </summary>
+        private void InitializeFrostedGlass_All()
+        {
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
-            
+
             var view = ApplicationView.GetForCurrentView();
             view.TitleBar.ButtonBackgroundColor = Colors.Transparent; //将标题栏的三个键背景设为透明
             view.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent; //失去焦点时，将三个键背景设为透明
@@ -47,6 +51,10 @@ namespace _1A2B
             InitializeFrostedGlass(GlassHost);
         }
 
+        /// <summary>
+        /// 毛玻璃注入灵魂
+        /// </summary>
+        /// <param name="glassHost"></param>
         private void InitializeFrostedGlass(UIElement glassHost)
         {
             Visual hostVisual = ElementCompositionPreview.GetElementVisual(glassHost);
@@ -60,6 +68,11 @@ namespace _1A2B
             glassVisual.StartAnimation("Size", bindSizeAnimation);
         }
 
+        /// <summary>
+        /// 游戏开始按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_StartGame(object sender, RoutedEventArgs e)
         {
             if (Core.gameControl.GetGameStatus() != 1)
@@ -71,6 +84,11 @@ namespace _1A2B
             }
         }
 
+        /// <summary>
+        /// 游戏重置按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_RestartGame(object sender, RoutedEventArgs e)
         {
             if (Core.gameControl.GetGameStatus() != 1)

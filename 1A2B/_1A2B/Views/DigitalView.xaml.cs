@@ -21,6 +21,11 @@ namespace _1A2B.Views
     public sealed partial class DigitalView : UserControl
     {
 
+        /// <summary>
+        /// 输入屏幕数码更新
+        /// </summary>
+        /// <param name="textView">文本框</param>
+        /// <param name="num">数码</param>
         static void ContentUpdate(TextBlock textView, InputControl.InputType num ) {
             int i = (int)num;
             if ((1 <= i) && (i <= 10))
@@ -34,9 +39,14 @@ namespace _1A2B.Views
 
         }
 
-
+        /// <summary>
+        /// 输入屏幕数码记录
+        /// </summary>
         private InputControl.InputType[] Buff = new InputControl.InputType[4];
 
+        /// <summary>
+        /// 输入屏幕数码记录 属性
+        /// </summary>
         public InputControl.InputType[] MyContent  {
             get => Buff;
             set {

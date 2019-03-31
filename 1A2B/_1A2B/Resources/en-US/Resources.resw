@@ -117,7 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NoticeBlock_Error_StartWithZero" xml:space="preserve">
+  <data name="NoticeBlock_Error_Input_Default" xml:space="preserve">
+    <value>Your input is invalid.</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 错误 | 一般错误</comment>
+  </data>
+  <data name="NoticeBlock_Error_Input_Duplicate" xml:space="preserve">
+    <value>There are two or more digits in your input is the same.</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 错误 | 数码重复错误</comment>
+  </data>
+  <data name="NoticeBlock_Error_Input_StartWithZero" xml:space="preserve">
     <value>Zero is not allow at the start of the number.</value>
     <comment>界面 | 游戏状态 | 输出内容 | 错误 | 前导零</comment>
   </data>

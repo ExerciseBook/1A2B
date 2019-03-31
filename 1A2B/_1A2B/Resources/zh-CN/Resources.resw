@@ -117,12 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NoticeBlock_Error_StartWithZero" xml:space="preserve">
+  <data name="NoticeBlock_Error_Input_Default" xml:space="preserve">
+    <value>输入不合法。</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 错误 | 一般错误</comment>
+  </data>
+  <data name="NoticeBlock_Error_Input_Duplicate" xml:space="preserve">
+    <value>你的输入中存在重复的数码。</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 错误 | 数码重复错误</comment>
+  </data>
+  <data name="NoticeBlock_Error_Input_StartWithZero" xml:space="preserve">
     <value>千位数是不可以出现零了辣~</value>
     <comment>界面 | 游戏状态 | 输出内容 | 错误 | 前导零</comment>
   </data>
   <data name="NoticeBlock_Info_AlreadyStart" xml:space="preserve">
-    <value>游戏已开始惹，再戳这个按钮就要爆惹</value>
+    <value>游戏已开始惹，再戳这个按钮就要爆惹。</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏已经开始了不需要再按开始按钮了</comment>
   </data>
   <data name="NoticeBlock_Info_Game_End_Lost" xml:space="preserve">
@@ -134,11 +142,11 @@
     <comment>界面 | 游戏状态 | 输出内容 | 游戏结束 题目解出提示</comment>
   </data>
   <data name="NoticeBlock_Info_Game_Restart" xml:space="preserve">
-    <value>游戏重新开始</value>
+    <value>游戏重新开始。</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏重置提示</comment>
   </data>
   <data name="NoticeBlock_Info_Game_Start" xml:space="preserve">
-    <value>！游戏开始了！</value>
+    <value>游戏开始了！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏开始提示</comment>
   </data>
   <data name="NoticeBlock_Info_HavntStart" xml:space="preserve">
@@ -146,7 +154,7 @@
     <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误</comment>
   </data>
   <data name="NoticeBlock_Info_HavntStart_WithAnswer_Lost" xml:space="preserve">
-    <value>草，答案竟然是。。。 %ANSWER% ！！
+    <value>答案竟然是。。。 %ANSWER% ！！
 我不服！我要重来！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 (带答案) (失败)</comment>
   </data>

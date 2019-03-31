@@ -10,14 +10,34 @@ namespace _1A2B.source
     class Core
     {
 
+        /// <summary>
+        /// 资源加载器
+        /// </summary>
         static public ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
 
+        /// <summary>
+        /// 输入控制
+        /// </summary>
         static public source.InputControl inputControl;
+
+        /// <summary>
+        /// 游戏控制
+        /// </summary>
         static public source.GameLogic gameControl;
+
+        /// <summary>
+        /// 显示控制
+        /// </summary>
         static public source.DisplayControl displayControl;
 
+        /// <summary>
+        /// 游戏核心控制类
+        /// </summary>
         public class TCoreControl {
 
+            /// <summary>
+            /// 游戏开始 初始化流程
+            /// </summary>
             public void Start() {
                 displayControl.HistoryBoard.ClearHistory();
                 displayControl.HistoryBoard.ClearLightUp();
@@ -27,6 +47,10 @@ namespace _1A2B.source
 
             }
         }
+
+        /// <summary>
+        /// 游戏核心控制
+        /// </summary>
         static public TCoreControl CoreControl = new TCoreControl();
 
     }

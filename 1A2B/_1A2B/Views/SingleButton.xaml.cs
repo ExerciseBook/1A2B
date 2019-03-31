@@ -20,23 +20,40 @@ namespace _1A2B.Views
 {
     public sealed partial class SingleButton : UserControl
     {
+        /// <summary>
+        /// 按钮值
+        /// </summary>
         public InputControl.InputType ThisValue { get; set; }
+
+        /// <summary>
+        /// 按钮字体大小
+        /// </summary>
         public double ThisFontSize {
             get => MyContent.FontSize;
             set {
                 MyContent.FontSize = value;
             } }
 
+        /// <summary>
+        /// 按钮显示文本
+        /// </summary>
         public string ThisContent { get => MyContent.Text; set {
                 MyContent.Text = value;
             } }
 
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public SingleButton()
         {
             this.InitializeComponent();
         }
 
+        /// <summary>
+        /// 按钮点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void onClick(object sender, RoutedEventArgs e)
         {
             Core.inputControl.Input(ThisValue);

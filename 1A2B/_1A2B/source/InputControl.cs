@@ -12,7 +12,9 @@ namespace _1A2B.source
 {
     public class InputControl
     {
-        
+        /// <summary>
+        /// 用户输入信息
+        /// </summary>
         public enum InputType { NONE, Num0, Num1, Num2, Num3, Num4, Num5, Num6, Num7, Num8, Num9, Num10, Enter, ESC, Backspace };
 
         /// <summary>
@@ -27,9 +29,16 @@ namespace _1A2B.source
             Window.Current.CoreWindow.KeyDown += onKeydown;
         }
 
+        /// <summary>
+        /// 输入事件处理
+        /// </summary>
+        /// <param name="a">输入的内容</param>
         public void Input(InputType a) {
 
+            // 游戏是否开始
             if (Core.gameControl.GetGameStatus() != 1) {
+                //游戏未开始
+
                 if (Core.gameControl.GetGameStatus() == 0)
                 {
                     Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_HavntStart");
@@ -45,7 +54,7 @@ namespace _1A2B.source
                 return;
             }
 
-
+            // 处理输入的内容
             if (a == InputType.ESC)
             {
                 inputBuff = new InputType[4];
@@ -60,10 +69,20 @@ namespace _1A2B.source
                         number += ((int)inputBuff[i] - 1) * Power(10, (3 - i));
                     }
 
-                    if ((Core.gameControl.GetGameStatus() == 1) && (Core.gameControl.submit(number)==0)) {
-
+                    if (Core.gameControl.submit(number) == 0)
+                    {
                         Core.displayControl.HistoryBoard.AddHistory(inputBuff, Core.gameControl.LastSubmit);
                         inputBuff = new InputType[4];
+                    }
+                    else {
+                        int status = Core.gameControl.WhyInvalid(number);
+                        switch (status) {
+                            //case 0:
+                            case 1: { Core.displayControl.NoticeBlock.Print("NoticeBlock_Error_Input_StartWithZero"); break; }
+                            //case 2: { Core.displayControl.NoticeBlock.Print("NoticeBlock_Error_Input_TooLarge"); break; }
+                            case 3: { Core.displayControl.NoticeBlock.Print("NoticeBlock_Error_Input_Duplicate"); break; }
+                            default : { Core.displayControl.NoticeBlock.Print("NoticeBlock_Error_Input_Default"); break; }
+                        }
                     }
                 }
             }
@@ -83,7 +102,7 @@ namespace _1A2B.source
                     while (inputBuff[i] != InputType.NONE) i++;
 
                     if ((i == 0) && (a == InputType.Num0)) {
-                        Core.displayControl.NoticeBlock.Print("NoticeBlock_Error_StartWithZero");
+                        Core.displayControl.NoticeBlock.Print("NoticeBlock_Error_Input_StartWithZero");
                     }
                     else
                     { 
