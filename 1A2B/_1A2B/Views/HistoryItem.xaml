@@ -28,20 +28,20 @@
         <localViews:DigitalView x:Name="Number" Grid.Column="0" FontFamily="Segoe UI"/>
 -->
         
-        <Button Background="Transparent" x:Name="NumThousand" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0">
-            <TextBlock TextAlignment="Center" FontSize="48"/>
+        <Button Background="Transparent" x:Name="ButtonThousand"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Click="ButtonThousand_Click">
+            <TextBlock x:Name="NumThousand" TextAlignment="Center" FontSize="48"/>
         </Button>
-        <Button Background="Transparent" x:Name="NumHundred" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2">
-            <TextBlock TextAlignment="Center" FontSize="48"/>
+        <Button Background="Transparent" x:Name="ButtonHundred"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Click="ButtonHundred_Click">
+            <TextBlock x:Name="NumHundred" TextAlignment="Center" FontSize="48"/>
         </Button>
-        <Button Background="Transparent" x:Name="NumTen" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4">
-            <TextBlock TextAlignment="Center" FontSize="48"/>
+        <Button Background="Transparent" x:Name="ButtonTen" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Click="ButtonTen_Click">
+            <TextBlock x:Name="NumTen" TextAlignment="Center" FontSize="48"/>
         </Button>
-        <Button Background="Transparent" x:Name="NumUnit" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="6">
-            <TextBlock TextAlignment="Center" FontSize="48"/>
+        <Button Background="Transparent" x:Name="ButtonUnit" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="6" Click="ButtonUnit_Click">
+            <TextBlock x:Name="NumUnit" TextAlignment="Center" FontSize="48"/>
         </Button>
 
-        <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="8">
+        <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="8" Click="ButtonClear_Click">
             <TextBlock x:Name="Result" TextAlignment="Center" FontSize="48"/>
         </Button>
         

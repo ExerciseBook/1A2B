@@ -19,7 +19,8 @@ namespace _1A2B.source
         public class TCoreControl {
 
             public void Start() {
-                displayControl.HistoryBoard.Clear();
+                displayControl.HistoryBoard.ClearHistory();
+                displayControl.HistoryBoard.ClearLightUp();
                 inputControl.ClearBuff();
                 gameControl.Start();
                 displayControl.NoticeBlock.Print("NoticeBlock_Info_Game_Start");

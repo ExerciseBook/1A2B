@@ -75,6 +75,10 @@ namespace _1A2B.source
 
             cntEnquire = 0;
 
+            ans.n = 0;
+            ans.nA = 0;
+            ans.nB = 0;
+
             int a = 0;
             Random rand = new Random();
             while (!IsValid(a)) { a = rand.Next(10000); };
@@ -102,13 +106,15 @@ namespace _1A2B.source
          * 本方法用于获取游戏当前状态
          * </summary>
          * 
-         * <returns>0 游戏未开始, 1 正在游戏, 2 游戏结束</returns>
+         * <returns>0 游戏未开始, 1 正在游戏, 2 游戏胜利, 3 游戏失败</returns>
          */
         public int GetGameStatus()
         {
-            if (ans.nA == 4 || cntEnquire == 10)
+            if (ans.nA == 4)
                 return 2;
             else
+            if (cntEnquire == 10)
+                return 3;
             if (msnTargetThousandsDigit != 0)
                 return 1;
             else 
@@ -166,12 +172,13 @@ namespace _1A2B.source
             }
         }
 
-        /// <summary>
-        /// 在玩家失败时显示正确答案
-        /// </summary>
-        /// <returns>返回的正确答案</returns>
-
-        private int GetAns()
+        /**
+         * <summary>
+         * 在玩家失败时显示正确答案
+         * </summary>
+         * <returns>返回的正确答案</returns>
+         */
+        public int GetAns()
         {
             return msnTargetThousandsDigit * 1000 + msnTargetHundredsDigit * 100 + msnTargetTensDigit * 10 + msnTargetUnitsDigit;
         }
@@ -201,7 +208,7 @@ namespace _1A2B.source
 
                 if (ans.nA == 4)
                 {
-                    Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_Game_End_Win");
+                    Core.displayControl.NoticeBlock.PrintPlain(Core.resourceLoader.GetString("NoticeBlock_Info_Game_End_Win").Replace("%ANSWER%", "" + GetAns()));
                 }
                 else
                 if (cntEnquire == 10)

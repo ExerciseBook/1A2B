@@ -29,10 +29,19 @@ namespace _1A2B.source
 
         public void Input(InputType a) {
 
-            if (Core.gameControl.GetGameStatus() == 0)
-            {
-                Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_HavntStart");
-
+            if (Core.gameControl.GetGameStatus() != 1) {
+                if (Core.gameControl.GetGameStatus() == 0)
+                {
+                    Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_HavntStart");
+                }
+                else if (Core.gameControl.GetGameStatus() == 3)
+                {
+                    Core.displayControl.NoticeBlock.PrintPlain(Core.resourceLoader.GetString("NoticeBlock_Info_HavntStart_WithAnswer_Lost").Replace("%ANSWER%", "" + Core.gameControl.GetAns()));
+                }
+                else if (Core.gameControl.GetGameStatus() == 2)
+                {
+                    Core.displayControl.NoticeBlock.PrintPlain(Core.resourceLoader.GetString("NoticeBlock_Info_HavntStart_WithAnswer_Win").Replace("%ANSWER%", "" + Core.gameControl.GetAns()));
+                }
                 return;
             }
 
@@ -53,7 +62,7 @@ namespace _1A2B.source
 
                     if ((Core.gameControl.GetGameStatus() == 1) && (Core.gameControl.submit(number)==0)) {
 
-                        Core.displayControl.HistoryBoard.Add(inputBuff, Core.gameControl.LastSubmit);
+                        Core.displayControl.HistoryBoard.AddHistory(inputBuff, Core.gameControl.LastSubmit);
                         inputBuff = new InputType[4];
                     }
                 }

@@ -22,26 +22,33 @@ namespace _1A2B.Views
     {
         private int count;
         public int Count { get => count; private set => count = value; }
-            
+
+        struct TLightUp {
+            public InputControl.InputType Digital;
+            public int Pos;
+        }
+        TLightUp LightUpStatus;
+
         public HistoryBoard()
         {
             this.InitializeComponent();
         }
+        
 
-
-        public void Clear() {
+        public void ClearHistory() {
             List1.Items.Clear();
             List2.Items.Clear();
             count = 0;
         }
 
 
-        public void Add(InputControl.InputType[] inputInfo,GameLogic.Response AResponse) {
+        public void AddHistory(InputControl.InputType[] inputInfo,GameLogic.Response AResponse) {
             if (count >= 10) { return; }
 
             HistoryItem newItem = new HistoryItem();
             newItem.MyContent = inputInfo;
             newItem.Status = AResponse;
+            newItem.LightUp(LightUpStatus.Digital, LightUpStatus.Pos);
 
             if (count < 5) {
                 List1.Items.Add(newItem);
@@ -50,9 +57,25 @@ namespace _1A2B.Views
             }
 
             count++;
-
         }
 
+
+        public void LightUp(InputControl.InputType Digital, int pos) {
+            for (int i = 0; i < List1.Items.Count; i++)
+            {
+                ((HistoryItem)List1.Items[i]).LightUp(Digital, pos);
+            }
+            for (int i = 0; i < List2.Items.Count; i++)
+            {
+                ((HistoryItem)List2.Items[i]).LightUp(Digital, pos);
+            }
+            LightUpStatus.Digital = Digital;
+            LightUpStatus.Pos = pos;
+        }
+
+        public void ClearLightUp() {
+            LightUp(InputControl.InputType.NONE, -1);
+        }
 
     }
 }

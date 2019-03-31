@@ -14,7 +14,7 @@ namespace _1A2B.source
 
         
 
-        public class TNoticeBlock        {
+        public class TNoticeBlock {
             private TextBlock noticeBlock;
             //public TextBlock NoteBlock{ get => noteBlock; private set { noteBlock = value; } }
 

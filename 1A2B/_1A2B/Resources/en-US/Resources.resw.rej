@@ -1,0 +1,12 @@
+diff a/1A2B/_1A2B/Resources/en-US/Resources.resw b/1A2B/_1A2B/Resources/en-US/Resources.resw	(rejected hunks)
+@@ -117,10 +117,6 @@
+   <resheader name="writer">
+     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+   </resheader>
+-  <data name="NoticeBlock_Info_AlreadyStart" xml:space="preserve">
+-    <value>The game is already started.</value>
+-    <comment>界面 | 游戏状态 | 输出内容 | 游戏已经开始了不需要再按开始按钮了</comment>
+-  </data>
+   <data name="NoticeBlock_Info_Game_End_Lost" xml:space="preserve">
+     <value>Oh, the answer is %ANSWER%.</value>
+     <comment>界面 | 游戏状态 | 输出内容 | 游戏结束 题目未解出提示</comment>

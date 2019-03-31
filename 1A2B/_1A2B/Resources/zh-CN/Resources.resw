@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="NoticeBlock_Info_AlreadyStart" xml:space="preserve">
-    <value>游戏已开始</value>
+    <value>游戏已开始惹，再戳这个按钮就要爆惹</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏已经开始了不需要再按开始按钮了</comment>
   </data>
   <data name="NoticeBlock_Info_Game_End_Lost" xml:space="preserve">
-    <value>草，答案竟然是。。。 %ANSWER% ！！</value>
+    <value>啊！答案竟然是。。。 %ANSWER% ！！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏结束 题目未解出提示</comment>
   </data>
   <data name="NoticeBlock_Info_Game_End_Win" xml:space="preserve">
-    <value>你果然是个奆，太强了！</value>
+    <value>你果然是个奆，太强了！答案就是 %ANSWER%！！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏结束 题目解出提示</comment>
   </data>
   <data name="NoticeBlock_Info_Game_Restart" xml:space="preserve">
@@ -141,6 +141,16 @@
     <value>游戏还没开始喔~点一下“开始”键叭！</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误</comment>
   </data>
+  <data name="NoticeBlock_Info_HavntStart_WithAnswer_Lost" xml:space="preserve">
+    <value>草，答案竟然是。。。 %ANSWER% ！！
+我不服！我要重来！</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 (带答案) (失败)</comment>
+  </data>
+  <data name="NoticeBlock_Info_HavntStart_WithAnswer_Win" xml:space="preserve">
+    <value>你果然是个奆，太强了！答案就是 %ANSWER%！！
+这个游戏太好玩力！我要再玩一次！</value>
+    <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 (带答案) (成功)</comment>
+  </data>
   <data name="NoticeBlock_Info_Ready" xml:space="preserve">
     <value>一切就绪</value>
     <comment>界面 | 游戏状态 | 输出内容 | 等待下一个指令</comment>
@@ -150,7 +160,7 @@
     <comment>界面 | 虚拟键盘 | 退格键 | 文字内容</comment>
   </data>
   <data name="UI_Keyboard_Button_Backspace.ThisFontSize" xml:space="preserve">
-    <value>18</value>
+    <value>24</value>
     <comment>界面 | 虚拟键盘 | 退格键 | 字体大小</comment>
   </data>
   <data name="UI_Keyboard_Button_Enter.ThisContent" xml:space="preserve">
@@ -174,7 +184,7 @@
     <comment>界面 | 游戏菜单 | 开始按钮 | 字体大小</comment>
   </data>
   <data name="UI_Menu_Start.Text" xml:space="preserve">
-    <value>开始</value>
+    <value>新开游戏</value>
     <comment>界面 | 游戏菜单 | 开始按钮 | 文字内容</comment>
   </data>
   <data name="UI_NoticeBlock.FontSize" xml:space="preserve">

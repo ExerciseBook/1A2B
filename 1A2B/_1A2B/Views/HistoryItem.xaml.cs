@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,6 +22,14 @@ namespace _1A2B.Views
 {
     public sealed partial class HistoryItem : UserControl
     {
+        public HistoryItem()
+        {
+            this.InitializeComponent();
+
+            //TheNumber = Number;
+        }
+
+
         static void ContentUpdate(TextBlock textView, InputControl.InputType num)
         {
             int i = (int)num;
@@ -37,7 +46,6 @@ namespace _1A2B.Views
 
 
         private InputControl.InputType[] Buff = new InputControl.InputType[4];
-
         public InputControl.InputType[] MyContent
         {
             get => Buff;
@@ -46,17 +54,16 @@ namespace _1A2B.Views
                 Buff = value;
                 if (value.Length == 4)
                 {
-                    ContentUpdate((TextBlock)NumThousand.Content, value[0]);
-                    ContentUpdate((TextBlock)NumHundred.Content, value[1]);
-                    ContentUpdate((TextBlock)NumTen.Content, value[2]);
-                    ContentUpdate((TextBlock)NumUnit.Content, value[3]);
+                    ContentUpdate(NumThousand, value[0]);
+                    ContentUpdate(NumHundred, value[1]);
+                    ContentUpdate(NumTen, value[2]);
+                    ContentUpdate(NumUnit, value[3]);
 
                 }
             }
 
         }
 
-        //public DigitalView TheNumber;
 
         private GameLogic.Response status;
         public GameLogic.Response Status {
@@ -67,12 +74,58 @@ namespace _1A2B.Views
             }
         }
 
-        public HistoryItem()
-        {
-            this.InitializeComponent();
+        private void LightUp(Button button, TextBlock textblock, int position, InputControl.InputType Digital, int pos) {
+            if (Buff[position] == Digital)
+            {
+                textblock.Foreground = new SolidColorBrush(Colors.Red);
+            }
+            else {
+                textblock.Foreground = new SolidColorBrush(Colors.Black);
+            }
 
-            //TheNumber = Number;
+
+            if (position == pos)
+            {
+                button.Background = new SolidColorBrush(Color.FromArgb(0x7F, 0x00, 0xFF, 0xFF)); //高亮
+            }
+            else {
+                button.Background = new SolidColorBrush(Color.FromArgb(0x00, 0xFF, 0xFF, 0xFF)); //透明
+            }
         }
 
+
+
+        public void LightUp(InputControl.InputType Digital, int pos) {
+            LightUp(ButtonThousand, NumThousand, 0, Digital, pos);
+            LightUp(ButtonHundred, NumHundred, 1, Digital, pos);
+            LightUp(ButtonTen, NumTen, 2, Digital, pos);
+            LightUp(ButtonUnit, NumUnit, 3, Digital, pos);
+        }
+
+
+        private void ButtonThousand_Click(object sender, RoutedEventArgs e)
+        {
+            Core.displayControl.HistoryBoard.LightUp(Buff[0],0);
+        }
+
+        private void ButtonHundred_Click(object sender, RoutedEventArgs e)
+        {
+            Core.displayControl.HistoryBoard.LightUp(Buff[1], 1);
+        }
+
+        private void ButtonTen_Click(object sender, RoutedEventArgs e)
+        {
+            Core.displayControl.HistoryBoard.LightUp(Buff[2], 2);
+        }
+
+        private void ButtonUnit_Click(object sender, RoutedEventArgs e)
+        {
+            Core.displayControl.HistoryBoard.LightUp(Buff[3], 3);
+        }
+
+        private void ButtonClear_Click(object sender, RoutedEventArgs e)
+        {
+            Core.displayControl.HistoryBoard.LightUp(InputControl.InputType.NONE, -1);
+        }
     }
 }
