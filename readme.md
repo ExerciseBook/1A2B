@@ -13,7 +13,7 @@
 - 请发挥你的聪明才智来解决这个问题吧~
 
 
-## 开发者
+## 搬砖者
 ### 代码
 - [Exercisebook](https://github.com/ExerciseBook)
 - [Eddy Wei](https://github.com/anlowee)
