@@ -80,7 +80,7 @@ namespace _1A2B.Views
                 textblock.Foreground = new SolidColorBrush(Colors.Red);
             }
             else {
-                textblock.Foreground = new SolidColorBrush((Color)Application.Current.Resources["SystemChromeWhiteColor"]);
+                textblock.Foreground = new SolidColorBrush((Color)Application.Current.Resources["SystemBaseHighColor"]);
             }
 
 
