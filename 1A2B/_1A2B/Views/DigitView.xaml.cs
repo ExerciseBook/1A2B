@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace _1A2B.Views
 {
-    public sealed partial class DigitalView : UserControl
+    public sealed partial class DigitView : UserControl
     {
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace _1A2B.Views
 
         }
 
-        public DigitalView()
+        public DigitView()
         {
             this.InitializeComponent();
         }

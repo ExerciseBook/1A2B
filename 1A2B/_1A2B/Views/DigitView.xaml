@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="_1A2B.Views.DigitalView"
+    x:Class="_1A2B.Views.DigitView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:_1A2B._1A2B.Views"

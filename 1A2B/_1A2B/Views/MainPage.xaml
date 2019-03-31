@@ -58,7 +58,7 @@
         
         <!--输入屏幕-->
         <Grid Grid.Row="3" Grid.Column="3" Background="#00000000">
-            <localViews:DigitalView x:Name="InputScreen" />
+            <localViews:DigitView x:Name="InputScreen" />
         </Grid>
 
         <!--虚拟键盘-->

@@ -127,8 +127,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="_1A2B\source\Core.cs" />
-    <Compile Include="_1A2B\Views\DigitalView.xaml.cs">
-      <DependentUpon>DigitalView.xaml</DependentUpon>
+    <Compile Include="_1A2B\Views\DigitView.xaml.cs">
+      <DependentUpon>DigitView.xaml</DependentUpon>
     </Compile>
     <Compile Include="_1A2B\Views\HistoryBoard.xaml.cs">
       <DependentUpon>HistoryBoard.xaml</DependentUpon>
@@ -174,7 +174,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="_1A2B\Views\DigitalView.xaml">
+    <Page Include="_1A2B\Views\DigitView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

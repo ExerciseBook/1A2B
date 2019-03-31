@@ -9,12 +9,12 @@ namespace _1A2B.source
         /// <summary>
         /// 输入屏幕控件 记录
         /// </summary>
-        private DigitalView inputScreen;
+        private DigitView inputScreen;
 
         /// <summary>
         /// 输入屏幕控件
         /// </summary>
-        public DigitalView InputScreen { get => inputScreen; private set => inputScreen = value; }
+        public DigitView InputScreen { get => inputScreen; private set => inputScreen = value; }
 
         /// <summary>
         /// 历史记录控件 记录
@@ -74,7 +74,7 @@ namespace _1A2B.source
         /// <param name="aInputScreen">输入屏幕控件</param>
         /// <param name="ahistoryBoard">历史记录控件</param>
         /// <param name="aNoticeBlock">游戏提示文本框</param>
-        public DisplayControl(DigitalView aInputScreen,HistoryBoard ahistoryBoard,TextBlock aNoticeBlock) {
+        public DisplayControl(DigitView aInputScreen,HistoryBoard ahistoryBoard,TextBlock aNoticeBlock) {
             inputScreen = aInputScreen;
             historyBoard = ahistoryBoard;
             NoticeBlock = new TNoticeBlock(aNoticeBlock);
