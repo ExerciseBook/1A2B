@@ -21,5 +21,6 @@
 - en-US : [Exercisebook](https://github.com/ExerciseBook)
 - zh-CN : [Eddy Wei](https://github.com/anlowee)
 - zh-HK : [mrhso](https://github.com/mrhso)
+- de-de : CDPZ
 ### 感谢
 - 毛玻璃注入灵魂的 [一年又一年](https://github.com/ynyyn)

@@ -155,6 +155,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="1A2B_TemporaryKey.pfx" />
+    <PRIResource Include="_1A2B\Resources\de-de\Resources.resw" />
     <PRIResource Include="_1A2B\Resources\zh-HK\Resources.resw" />
     <PRIResource Include="_1A2B\Resources\zh-CN\Resources.resw" />
     <PRIResource Include="_1A2B\Resources\en-US\Resources.resw" />
