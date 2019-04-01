@@ -184,7 +184,7 @@ If you want another try, click the start button.</value>
     <comment>界面 | 虚拟键盘 | 回车键 | 文字内容</comment>
   </data>
   <data name="UI_Keyboard_Button_Enter.ThisFontSize" xml:space="preserve">
-    <value>24</value>
+    <value>18</value>
     <comment>界面 | 虚拟键盘 | 回车键 | 字体大小</comment>
   </data>
   <data name="UI_Menu_About.FontSize" xml:space="preserve">
