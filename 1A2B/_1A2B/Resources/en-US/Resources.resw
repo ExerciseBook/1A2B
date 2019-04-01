@@ -164,7 +164,7 @@ If you want another try, click the start button.</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 (带答案) (成功)</comment>
   </data>
   <data name="NoticeBlock_Info_HavntStart_WithGuide" xml:space="preserve">
-    <value>Click the Startt button to start a new game.</value>
+    <value>Click the Start button to start a new game.</value>
     <comment>界面 | 游戏状态 | 输出内容 | 游戏还未开始错误 指引点击开始游戏</comment>
   </data>
   <data name="NoticeBlock_Info_Ready" xml:space="preserve">
@@ -186,6 +186,14 @@ If you want another try, click the start button.</value>
   <data name="UI_Keyboard_Button_Enter.ThisFontSize" xml:space="preserve">
     <value>24</value>
     <comment>界面 | 虚拟键盘 | 回车键 | 字体大小</comment>
+  </data>
+  <data name="UI_Menu_About.FontSize" xml:space="preserve">
+    <value>18</value>
+    <comment>界面 | 游戏菜单 | 关于按钮 | 文字大小</comment>
+  </data>
+  <data name="UI_Menu_About.Text" xml:space="preserve">
+    <value>About</value>
+    <comment>界面 | 游戏菜单 | 关于按钮 | 文字内容</comment>
   </data>
   <data name="UI_Menu_Restart.FontSize" xml:space="preserve">
     <value>18</value>

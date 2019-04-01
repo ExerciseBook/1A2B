@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Hosting;
 using Windows.UI.Composition;
 using Windows.UI;
 using _1A2B.source;
+using Windows.System;
 
 // https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x804 上介绍了“空白页”项模板
 
@@ -32,7 +33,7 @@ namespace _1A2B
             //将三个控件绑定到全局静态变量
             Core.inputControl = new source.InputControl();
             Core.gameControl = new source.GameLogic();
-            Core.displayControl = new source.DisplayControl(InputScreen,historyBoard, NoticeBlock);
+            Core.displayControl = new source.DisplayControl(InputScreen, historyBoard, NoticeBlock);
         }
 
         /// <summary>
@@ -100,6 +101,16 @@ namespace _1A2B
                 Core.CoreControl.Start();
                 Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_Game_Restart");
             }
+        }
+
+        /// <summary>
+        /// 关于
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void Button_About(object sender, RoutedEventArgs e)
+        {
+            await Launcher.LaunchUriAsync(new Uri(@"https://github.com/ExerciseBook/1A2B"));
         }
 
     }

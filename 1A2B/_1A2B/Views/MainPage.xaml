@@ -96,6 +96,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -111,6 +112,12 @@
             <Grid Grid.Column="1" Grid.Row="0" BorderThickness="10">
                 <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_RestartGame">
                     <TextBlock x:Uid="UI_Menu_Restart"/>
+                </Button>
+            </Grid>
+            
+            <Grid Grid.Column="2" Grid.Row="0" BorderThickness="10">
+                <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_About">
+                    <TextBlock x:Uid="UI_Menu_About"/>
                 </Button>
             </Grid>
 

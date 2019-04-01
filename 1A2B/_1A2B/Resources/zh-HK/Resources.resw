@@ -187,6 +187,14 @@
     <value>24</value>
     <comment>界面 | 虚拟键盘 | 回车键 | 字体大小</comment>
   </data>
+  <data name="UI_Menu_About.FontSize" xml:space="preserve">
+    <value>18</value>
+    <comment>界面 | 游戏菜单 | 关于按钮 | 文字大小</comment>
+  </data>
+  <data name="UI_Menu_About.Text" xml:space="preserve">
+    <value>關於</value>
+    <comment>界面 | 游戏菜单 | 关于按钮 | 文字内容</comment>
+  </data>
   <data name="UI_Menu_Restart.FontSize" xml:space="preserve">
     <value>18</value>
     <comment>界面 | 游戏菜单 | 重置按钮 | 字体大小</comment>
