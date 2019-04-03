@@ -18,9 +18,10 @@
 - [Exercisebook](https://github.com/ExerciseBook)
 - [Eddy Wei](https://github.com/anlowee)
 ### 国际化支持
-- en-US : [Exercisebook](https://github.com/ExerciseBook)
-- zh-CN : [Eddy Wei](https://github.com/anlowee)
-- zh-HK : [mrhso](https://github.com/mrhso)
+- en-us : [Exercisebook](https://github.com/ExerciseBook)
+- zh-cn : [Eddy Wei](https://github.com/anlowee)
+- zh-hk : [mrhso](https://github.com/mrhso)
 - de-de : CDPZ
+- jp-jp : 冰可Aki
 ### 感谢
 - 毛玻璃注入灵魂的 [一年又一年](https://github.com/ynyyn)
