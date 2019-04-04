@@ -23,18 +23,18 @@
         </Grid.ColumnDefinitions>
 
         <!-- Foreground -->
-        <Button Background="Transparent" x:Name="NumThousand" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
-            <TextBlock TextAlignment="Center" FontSize="48"/> 
-        </Button>
-        <Button Background="Transparent" x:Name="NumHundred" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3">
-            <TextBlock TextAlignment="Center" FontSize="48"/>
-        </Button>
-        <Button Background="Transparent" x:Name="NumTen" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5">
-            <TextBlock TextAlignment="Center" FontSize="48"/>
-        </Button>
-        <Button Background="Transparent" x:Name="NumUnit" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="7">
-            <TextBlock TextAlignment="Center" FontSize="48"/>
-        </Button>
+        <Grid Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+            <TextBlock TextAlignment="Center" x:Name="NumThousand" FontSize="48"/> 
+        </Grid>
+        <Grid Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3">
+            <TextBlock TextAlignment="Center" x:Name="NumHundred" FontSize="48"/>
+        </Grid>
+        <Grid Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5">
+            <TextBlock TextAlignment="Center" x:Name="NumTen" FontSize="48"/>
+        </Grid>
+        <Grid Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="7">
+            <TextBlock TextAlignment="Center" x:Name="NumUnit" FontSize="48"/>
+        </Grid>
         
 
     </Grid>

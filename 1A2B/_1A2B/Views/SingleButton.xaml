@@ -21,7 +21,7 @@
             </Style>
         </Grid.Resources>
 
-        <Button x:Name="MyButton" Click="onClick">
+        <Button x:Name="MyButton" Click="onClick" IsTabStop="False" AllowFocusOnInteraction="False">
             <Grid x:Name="MyGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10">
                 <TextBlock x:Name="MyContent" TextAlignment="Center" FontSize="36"/>
             </Grid>

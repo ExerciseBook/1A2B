@@ -52,10 +52,10 @@ namespace _1A2B.Views
             set {
                 Buff = value;
                 if (value.Length == 4) {
-                    ContentUpdate((TextBlock)NumThousand.Content , value[0]);
-                    ContentUpdate((TextBlock)NumHundred.Content , value[1]);
-                    ContentUpdate((TextBlock)NumTen.Content , value[2]);
-                    ContentUpdate((TextBlock)NumUnit.Content , value[3]);
+                    ContentUpdate(NumThousand , value[0]);
+                    ContentUpdate(NumHundred , value[1]);
+                    ContentUpdate(NumTen , value[2]);
+                    ContentUpdate(NumUnit , value[3]);
 
                 }
             }

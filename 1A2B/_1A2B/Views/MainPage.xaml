@@ -105,19 +105,19 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Column="0" Grid.Row="0" BorderThickness="10">
-                <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_StartGame">
+                <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_StartGame" IsTabStop="False" AllowFocusOnInteraction="False">
                     <TextBlock x:Uid="UI_Menu_Start"/>
                 </Button>
             </Grid>
 
             <Grid Grid.Column="1" Grid.Row="0" BorderThickness="10">
-                <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_RestartGame">
+                <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_RestartGame" IsTabStop="False" AllowFocusOnInteraction="False">
                     <TextBlock x:Uid="UI_Menu_Restart"/>
                 </Button>
             </Grid>
             
             <Grid Grid.Column="2" Grid.Row="0" BorderThickness="10">
-                <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_About">
+                <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_About" IsTabStop="False" AllowFocusOnInteraction="False">
                     <TextBlock x:Uid="UI_Menu_About"/>
                 </Button>
             </Grid>
