@@ -20,7 +20,7 @@ namespace _1A2B.source
         /// <summary>
         /// 输入屏幕的内容
         /// </summary>
-        InputType[] inputBuff = new InputType[4];
+        private InputType[] inputBuff = new InputType[4];
 
         /// <summary>
         /// 构造函数 : 绑定按键侦听事件
@@ -165,8 +165,12 @@ namespace _1A2B.source
 
         }
 
+        /// <summary>
+        /// 清空输入信息
+        /// </summary>
         public void ClearBuff() {
-            InputType[] inputBuff = new InputType[4];
+            inputBuff = new InputType[4];
+            Core.displayControl.InputScreen.MyContent = inputBuff;
         }
 
     }
