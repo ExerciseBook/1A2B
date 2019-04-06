@@ -16,8 +16,43 @@
             <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
 
-        <ListView x:Name="List1" Grid.Column="0" HorizontalContentAlignment="Stretch"/>
-        <ListView x:Name="List2" Grid.Column="2" HorizontalContentAlignment="Stretch"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+
+        <ListView x:Name="List1" HorizontalContentAlignment="Stretch"/>
+        <ListView x:Name="List2" HorizontalContentAlignment="Stretch"/>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowState">
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="920" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="List1.(Grid.Column)" Value="0"/>
+                        <Setter Target="List2.(Grid.Column)" Value="2"/>
+                        <Setter Target="List1.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="List2.(Grid.RowSpan)" Value="2"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="List1.(Grid.Row)" Value="0"/>
+                        <Setter Target="List2.(Grid.Row)" Value="1"/>
+                        <Setter Target="List1.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="List2.(Grid.ColumnSpan)" Value="3"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
 
     </Grid>
 </UserControl>

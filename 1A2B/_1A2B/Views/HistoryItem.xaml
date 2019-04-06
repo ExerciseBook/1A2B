@@ -28,22 +28,68 @@
         <localViews:DigitalView x:Name="Number" Grid.Column="0" FontFamily="Segoe UI"/>
 -->
 
+
         <Button Background="Transparent" x:Name="ButtonThousand"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Click="ButtonThousand_Click" IsTabStop="False" AllowFocusOnInteraction="False">
-            <TextBlock x:Name="NumThousand" TextAlignment="Center" FontSize="48"/>
+            <TextBlock x:Name="NumThousand" TextAlignment="Center"/>
         </Button>
         <Button Background="Transparent" x:Name="ButtonHundred"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Click="ButtonHundred_Click" IsTabStop="False" AllowFocusOnInteraction="False">
-            <TextBlock x:Name="NumHundred" TextAlignment="Center" FontSize="48"/>
+            <TextBlock x:Name="NumHundred" TextAlignment="Center"/>
         </Button>
         <Button Background="Transparent" x:Name="ButtonTen" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Click="ButtonTen_Click" IsTabStop="False" AllowFocusOnInteraction="False">
-            <TextBlock x:Name="NumTen" TextAlignment="Center" FontSize="48"/>
+            <TextBlock x:Name="NumTen" TextAlignment="Center"/>
         </Button>
         <Button Background="Transparent" x:Name="ButtonUnit" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="6" Click="ButtonUnit_Click" IsTabStop="False" AllowFocusOnInteraction="False">
-            <TextBlock x:Name="NumUnit" TextAlignment="Center" FontSize="48"/>
+            <TextBlock x:Name="NumUnit" TextAlignment="Center"/>
         </Button>
 
         <Button Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="8" Click="ButtonClear_Click" IsTabStop="False" AllowFocusOnInteraction="False">
-            <TextBlock x:Name="Result" TextAlignment="Center" FontSize="48"/>
+            <TextBlock x:Name="Result" TextAlignment="Center"/>
         </Button>
+
+
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowState">
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1366" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="NumThousand.FontSize" Value="48"/>
+                        <Setter Target="NumHundred.FontSize" Value="48"/>
+                        <Setter Target="NumTen.FontSize" Value="48"/>
+                        <Setter Target="NumUnit.FontSize" Value="48"/>
+                        <Setter Target="Result.FontSize" Value="48"/>
+                    </VisualState.Setters>
+                </VisualState>
+                
+                <VisualState x:Name="MiddleState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="640" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="NumThousand.FontSize" Value="32"/>
+                        <Setter Target="NumHundred.FontSize" Value="32"/>
+                        <Setter Target="NumTen.FontSize" Value="32"/>
+                        <Setter Target="NumUnit.FontSize" Value="32"/>
+                        <Setter Target="Result.FontSize" Value="32"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="NumThousand.FontSize" Value="24" />
+                        <Setter Target="NumHundred.FontSize" Value="24" />
+                        <Setter Target="NumTen.FontSize" Value="24" />
+                        <Setter Target="NumUnit.FontSize" Value="24" />
+                        <Setter Target="Result.FontSize" Value="24" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         
     </Grid>
 </UserControl>
