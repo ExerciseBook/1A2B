@@ -16,26 +16,23 @@
             <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
+        
 
+        <ListView x:Name="List1" Grid.Column="0" HorizontalContentAlignment="Stretch"/>
+        <ListView x:Name="List2" Grid.Column="2" HorizontalContentAlignment="Stretch"/>
+        <ListView x:Name="ListAll" Grid.Column="0" Grid.ColumnSpan="3" HorizontalContentAlignment="Stretch"/>
 
-        <ListView x:Name="List1" HorizontalContentAlignment="Stretch"/>
-        <ListView x:Name="List2" HorizontalContentAlignment="Stretch"/>
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="WindowState">
                 <VisualState x:Name="WideState">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="920" />
+                        <AdaptiveTrigger MinWindowWidth="1366" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="List1.(Grid.Column)" Value="0"/>
-                        <Setter Target="List2.(Grid.Column)" Value="2"/>
-                        <Setter Target="List1.(Grid.RowSpan)" Value="2"/>
-                        <Setter Target="List2.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="ListAll.Visibility" Value="Collapsed"/>
+                        <Setter Target="List1.Visibility" Value="Visible"/>
+                        <Setter Target="List2.Visibility" Value="Visible"/>
                     </VisualState.Setters>
                 </VisualState>
 
@@ -44,15 +41,14 @@
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="List1.(Grid.Row)" Value="0"/>
-                        <Setter Target="List2.(Grid.Row)" Value="1"/>
-                        <Setter Target="List1.(Grid.ColumnSpan)" Value="3"/>
-                        <Setter Target="List2.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="ListAll.Visibility" Value="Visible"/>
+                        <Setter Target="List1.Visibility" Value="Collapsed"/>
+                        <Setter Target="List2.Visibility" Value="Collapsed"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        
+
 
     </Grid>
 </UserControl>

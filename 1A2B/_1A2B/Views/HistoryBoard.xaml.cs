@@ -57,6 +57,7 @@ namespace _1A2B.Views
         public void ClearHistory() {
             List1.Items.Clear();
             List2.Items.Clear();
+            ListAll.Items.Clear();
             count = 0;
         }
 
@@ -67,19 +68,26 @@ namespace _1A2B.Views
         /// <param name="AResponse">反馈部分</param>
         public void AddHistory(InputControl.InputType[] inputInfo,GameLogic.Response AResponse) {
             if (count >= 10) { return; }
+            count++;
 
             HistoryItem newItem = new HistoryItem();
             newItem.MyContent = inputInfo;
             newItem.Status = AResponse;
             newItem.LightUp(LightUpStatus.Digital, LightUpStatus.Pos);
 
-            if (count < 5) {
+            if (count <= 5) {
                 List1.Items.Add(newItem);
             } else {
                 List2.Items.Add(newItem);
             }
 
-            count++;
+
+            newItem = new HistoryItem();
+            newItem.MyContent = inputInfo;
+            newItem.Status = AResponse;
+            newItem.LightUp(LightUpStatus.Digital, LightUpStatus.Pos);
+
+            ListAll.Items.Add(newItem);
         }
 
         /// <summary>
@@ -96,6 +104,12 @@ namespace _1A2B.Views
             {
                 ((HistoryItem)List2.Items[i]).LightUp(Digital, pos);
             }
+            for (int i = 0; i < ListAll.Items.Count; i++)
+            {
+                ((HistoryItem)ListAll.Items[i]).LightUp(Digital, pos);
+            }
+
+
             LightUpStatus.Digital = Digital;
             LightUpStatus.Pos = pos;
         }
