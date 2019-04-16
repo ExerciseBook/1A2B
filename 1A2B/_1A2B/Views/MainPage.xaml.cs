@@ -41,10 +41,10 @@ namespace _1A2B
         /// </summary>
         private void InitializeFrostedGlass_All()
         {
-            var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+            Windows.ApplicationModel.Core.CoreApplicationViewTitleBar coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
 
-            var view = ApplicationView.GetForCurrentView();
+            Windows.UI.ViewManagement.ApplicationView view = ApplicationView.GetForCurrentView();
             view.TitleBar.ButtonBackgroundColor = Colors.Transparent; //将标题栏的三个键背景设为透明
             view.TitleBar.ButtonInactiveBackgroundColor = Colors.Transparent; //失去焦点时，将三个键背景设为透明
             view.TitleBar.ButtonInactiveForegroundColor = Colors.White; //失去焦点时，将三个键前景色设为白色
@@ -60,11 +60,11 @@ namespace _1A2B
         {
             Visual hostVisual = ElementCompositionPreview.GetElementVisual(glassHost);
             Compositor compositor = hostVisual.Compositor;
-            var backdropBrush = compositor.CreateHostBackdropBrush();
-            var glassVisual = compositor.CreateSpriteVisual();
+            Windows.UI.Composition.CompositionBackdropBrush backdropBrush = compositor.CreateHostBackdropBrush();
+            Windows.UI.Composition.SpriteVisual glassVisual = compositor.CreateSpriteVisual();
             glassVisual.Brush = backdropBrush;
             ElementCompositionPreview.SetElementChildVisual(glassHost, glassVisual);
-            var bindSizeAnimation = compositor.CreateExpressionAnimation("hostVisual.Size");
+            Windows.UI.Composition.ExpressionAnimation bindSizeAnimation = compositor.CreateExpressionAnimation("hostVisual.Size");
             bindSizeAnimation.SetReferenceParameter("hostVisual", hostVisual);
             glassVisual.StartAnimation("Size", bindSizeAnimation);
         }

@@ -23,5 +23,7 @@
 - zh-hk : [mrhso](https://github.com/mrhso)
 - de-de : CDPZ
 - jp-jp : 冰可Aki
+### 美术
+- 纸巾
 ### 感谢
 - 毛玻璃注入灵魂的 [一年又一年](https://github.com/ynyyn)
