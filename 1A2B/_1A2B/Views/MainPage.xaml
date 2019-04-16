@@ -69,28 +69,14 @@
         <Grid Grid.Column="8" Grid.Row="8" Background="#00000000">
             <!--历史记录-->
             <localViews:HistoryBoard x:Name="historyBoard"/>
-
-            <!--游戏状态-->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="4*"/>
-                    <RowDefinition Height="1*"/>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="4*"/>
-                </Grid.ColumnDefinitions>
-
-                <Grid Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0,0,30,30">
-                    <TextBlock x:Name="NoticeBlock" x:Uid="UI_NoticeBlock" TextAlignment="Right"/>
-                </Grid>
-            </Grid>
-            
         </Grid>
 
+        <!--游戏状态-->
+        <Grid Grid.Row="8" Grid.Column="8" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Padding="0,0,30,30">
+            <TextBlock x:Name="NoticeBlock" x:Uid="UI_NoticeBlock" TextAlignment="Right"/>
+        </Grid>
+
+        
         <Grid Grid.Row="2" Grid.Column="8" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
