@@ -19,7 +19,7 @@ using Windows.System;
 namespace _1A2B
 {
     /// <summary>
-    /// 可用于自身或导航至 Frame 内部的空白页。
+    /// 主页面
     /// </summary>
     public sealed partial class MainPage : Page
     {

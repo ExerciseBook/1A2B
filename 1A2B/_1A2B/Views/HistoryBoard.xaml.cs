@@ -119,6 +119,9 @@ namespace _1A2B.Views
         /// </summary>
         public void ClearLightUp() {
             LightUp(InputControl.InputType.NONE, -1);
+            ListAll.SelectedItem = null;
+            List1.SelectedItem = null;
+            List2.SelectedItem = null;
         }
 
     }

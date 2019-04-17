@@ -76,20 +76,31 @@
                     </VisualState.Setters>
                 </VisualState>
 
-                <!--
                 <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="480" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="NumThousand.FontSize" Value="36" />
+                        <Setter Target="NumHundred.FontSize" Value="36" />
+                        <Setter Target="NumTen.FontSize" Value="36" />
+                        <Setter Target="NumUnit.FontSize" Value="36" />
+                        <Setter Target="Result.FontSize" Value="36" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="MiniState">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="NumThousand.FontSize" Value="24" />
-                        <Setter Target="NumHundred.FontSize" Value="24" />
-                        <Setter Target="NumTen.FontSize" Value="24" />
-                        <Setter Target="NumUnit.FontSize" Value="24" />
-                        <Setter Target="Result.FontSize" Value="24" />
+                        <Setter Target="NumThousand.FontSize" Value="22" />
+                        <Setter Target="NumHundred.FontSize" Value="22" />
+                        <Setter Target="NumTen.FontSize" Value="22" />
+                        <Setter Target="NumUnit.FontSize" Value="22" />
+                        <Setter Target="Result.FontSize" Value="22" />
                     </VisualState.Setters>
                 </VisualState>
-                -->
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         

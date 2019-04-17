@@ -155,7 +155,8 @@ namespace _1A2B.Views
 
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
-            Core.displayControl.HistoryBoard.LightUp(InputControl.InputType.NONE, -1);
+            //Core.displayControl.HistoryBoard.LightUp(InputControl.InputType.NONE, -1);
+            Core.displayControl.HistoryBoard.ClearLightUp();
         }
     }
 }
