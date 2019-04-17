@@ -211,8 +211,4 @@ Für ein neues Spiel, bitte klicken Sie auf die startende Schaltfläch
     <value>Starten</value>
     <comment>界面 | 游戏菜单 | 开始按钮 | 文字内容</comment>
   </data>
-  <data name="UI_NoticeBlock.FontSize" xml:space="preserve">
-    <value>18</value>
-    <comment>界面 | 游戏状态 | 字体大小</comment>
-  </data>
 </root>
