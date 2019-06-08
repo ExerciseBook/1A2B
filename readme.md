@@ -22,8 +22,9 @@
 - zh-cn : [Eddy Wei](https://github.com/anlowee)
 - zh-hk : [mrhso](https://github.com/mrhso)
 - de-de : CDPZ
-- jp-jp : 冰可Aki
+- ja-jp : 冰可Aki
 ### 美术
 - 纸巾
 ### 感谢
 - 毛玻璃注入灵魂的 [一年又一年](https://github.com/ynyyn)
+- 测试员 [Kevin](https://github.com/thinkray)
