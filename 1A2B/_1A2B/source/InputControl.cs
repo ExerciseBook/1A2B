@@ -22,11 +22,20 @@ namespace _1A2B.source
         /// </summary>
         private InputType[] inputBuff = new InputType[4];
 
+        /// <summary>
+        /// 按键状态记录类型
+        /// </summary>
         private struct KeyStatus
         {
+            /// <summary>
+            /// Control键是否被按下
+            /// </summary>
             public int Control;
         };
 
+        /// <summary>
+        /// 按键状态记录
+        /// </summary>
         private KeyStatus aKeyStatus;
 
         /// <summary>
