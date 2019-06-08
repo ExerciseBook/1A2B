@@ -24,6 +24,9 @@ namespace _1A2B
     public sealed partial class MainPage : Page
     {
 
+        /// <summary>
+        /// 初始化页面
+        /// </summary>
         public MainPage()
         {
             this.InitializeComponent();

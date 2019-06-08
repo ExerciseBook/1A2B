@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_1A2B.source.Core">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="_1A2B.source.Core.TCoreControl" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>_1A2B\source\Core.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAABgAAAAAAAAAAAAAAAAAAAAABAAAAAAQAAAAAAgAA=</HashCode>
+      <FileName>_1A2B\source\Core.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_1A2B.source.DisplayControl" Collapsed="true">
+    <Position X="7.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAACAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAEAAAA=</HashCode>
+      <FileName>_1A2B\source\DisplayControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_1A2B.source.GameLogic">
+    <Position X="4.25" Y="5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="_1A2B.source.GameLogic.Response" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>_1A2B\source\GameLogic.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACAAACEQACAAAAAACAgAABACAAQAggAAAoABAQGggAA=</HashCode>
+      <FileName>_1A2B\source\GameLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_1A2B.source.InputControl" Collapsed="true">
+    <Position X="6" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADCAAAAAAAAAAAAAEAIAAIABAAAAAAAAAAA=</HashCode>
+      <FileName>_1A2B\source\InputControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_1A2B.Views.DigitView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_1A2B\Views\DigitView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_1A2B.Views.HistoryBoard" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAABIAAAAABAAAAAwAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_1A2B\Views\HistoryBoard.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_1A2B.Views.HistoryItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEYAAABEAAAAoAAABAEAAAAAAAAAgAAAAAAAAAAAAIA=</HashCode>
+      <FileName>_1A2B\Views\HistoryItem.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_1A2B.Views.KeyBoard" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_1A2B\Views\KeyBoard.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_1A2B.Views.SingleButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAhAAAAEAAAAAAAA=</HashCode>
+      <FileName>_1A2B\Views\SingleButton.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_1A2B.MainPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAABAAAAAAAABAACEAAAAAAAAAAAA=</HashCode>
+      <FileName>_1A2B\Views\MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_1A2B.App" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.UserControl" Collapsed="true">
+    <Position X="16" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Windows.UI.Xaml.Controls.Page" Collapsed="true">
+    <Position X="19.75" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

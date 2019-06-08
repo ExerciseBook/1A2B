@@ -2,17 +2,50 @@
 
 namespace _1A2B.source
 {
+    /// <summary>
+    /// 游戏核心逻辑
+    /// </summary>
     public class GameLogic
     {
-        public static bool[] aTargetNumber = new bool[10];
-        private static int msnTargetUnitsDigit, msnTargetTensDigit, msnTargetHundredsDigit, msnTargetThousandsDigit;//Target number
-        private static int msnSubmitUnitsDigit, msnSubmitTensDigit, msnSubmitHundredsDigit, msnSubmitThousandsDigit;//Submitted number
+        /// <summary>
+        /// 答案中是否存在这个数字
+        /// </summary>
+        private bool[] aTargetNumber = new bool[10];
 
+        /// <summary>
+        /// 答案
+        /// </summary>
+        private int msnTargetUnitsDigit, msnTargetTensDigit, msnTargetHundredsDigit, msnTargetThousandsDigit;
+
+        /// <summary>
+        /// 当前提交的答案
+        /// </summary>
+        private int msnSubmitUnitsDigit, msnSubmitTensDigit, msnSubmitHundredsDigit, msnSubmitThousandsDigit;
+
+        /// <summary>
+        /// 当前尝试次数
+        /// </summary>
         private int cntEnquire;
 
+        /// <summary>
+        /// 判定响应
+        /// </summary>
         public struct Response//the response of submit 
         {
-            public int n, nA, nB;//number of A&B
+            /// <summary>
+            /// 尝试答案
+            /// </summary>
+            public int n;
+
+            /// <summary>
+            /// A
+            /// </summary>
+            public int nA;
+
+            /// <summary>
+            /// B
+            /// </summary>
+            public int nB;
         };
 
         /// <summary>
@@ -20,7 +53,9 @@ namespace _1A2B.source
         /// </summary>
         public Response[] stats = new Response[10];
 
-
+        /// <summary>
+        /// 玩家上一次提交的答案
+        /// </summary>
         private Response ans;
 
         /// <summary>
@@ -199,7 +234,7 @@ namespace _1A2B.source
         /// </summary>
         /// <param name="a">用户输入的四位数</param>
         /// <returns>0 正常处理, -1 处理失败</returns>
-        public int submit(int a)
+        public int Submit(int a)
         {
             //用户提交答案尝试的时候这个方法会被调用
             //返回值啥的我没有限定，反正你最后告诉我你返回值是啥意思就好

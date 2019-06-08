@@ -18,6 +18,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace _1A2B.Views
 {
+    /// <summary>
+    /// 输入内容屏幕
+    /// </summary>
     public sealed partial class DigitView : UserControl
     {
 
@@ -26,7 +29,8 @@ namespace _1A2B.Views
         /// </summary>
         /// <param name="textView">文本框</param>
         /// <param name="num">数码</param>
-        static void ContentUpdate(TextBlock textView, InputControl.InputType num ) {
+        static void ContentUpdate(TextBlock textView, InputControl.InputType num)
+        {
             int i = (int)num;
             if ((1 <= i) && (i <= 10))
             {
@@ -47,21 +51,27 @@ namespace _1A2B.Views
         /// <summary>
         /// 输入屏幕数码记录 属性
         /// </summary>
-        public InputControl.InputType[] MyContent  {
+        public InputControl.InputType[] MyContent
+        {
             get => Buff;
-            set {
+            set
+            {
                 Buff = value;
-                if (value.Length == 4) {
-                    ContentUpdate(NumThousand , value[0]);
-                    ContentUpdate(NumHundred , value[1]);
-                    ContentUpdate(NumTen , value[2]);
-                    ContentUpdate(NumUnit , value[3]);
+                if (value.Length == 4)
+                {
+                    ContentUpdate(NumThousand, value[0]);
+                    ContentUpdate(NumHundred, value[1]);
+                    ContentUpdate(NumTen, value[2]);
+                    ContentUpdate(NumUnit, value[3]);
 
                 }
             }
 
         }
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public DigitView()
         {
             this.InitializeComponent();

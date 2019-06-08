@@ -18,6 +18,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace _1A2B.Views
 {
+    /// <summary>
+    /// 历史提交记录
+    /// </summary>
     public sealed partial class HistoryBoard : UserControl
     {
         /// <summary>
@@ -33,7 +36,8 @@ namespace _1A2B.Views
         /// <summary>
         /// 高亮记录类型
         /// </summary>
-        private struct TLightUp {
+        private struct TLightUp
+        {
             public InputControl.InputType Digital;
             public int Pos;
         }
@@ -50,11 +54,12 @@ namespace _1A2B.Views
         {
             this.InitializeComponent();
         }
-        
+
         /// <summary>
         /// 清理历史记录
         /// </summary>
-        public void ClearHistory() {
+        public void ClearHistory()
+        {
             List1.Items.Clear();
             List2.Items.Clear();
             ListAll.Items.Clear();
@@ -66,7 +71,8 @@ namespace _1A2B.Views
         /// </summary>
         /// <param name="inputInfo">数字部分</param>
         /// <param name="AResponse">反馈部分</param>
-        public void AddHistory(InputControl.InputType[] inputInfo,GameLogic.Response AResponse) {
+        public void AddHistory(InputControl.InputType[] inputInfo, GameLogic.Response AResponse)
+        {
             if (count >= 10) { return; }
             count++;
 
@@ -75,9 +81,12 @@ namespace _1A2B.Views
             newItem.Status = AResponse;
             newItem.LightUp(LightUpStatus.Digital, LightUpStatus.Pos);
 
-            if (count <= 5) {
+            if (count <= 5)
+            {
                 List1.Items.Add(newItem);
-            } else {
+            }
+            else
+            {
                 List2.Items.Add(newItem);
             }
 
@@ -95,7 +104,8 @@ namespace _1A2B.Views
         /// </summary>
         /// <param name="Digital">欲高亮的数码</param>
         /// <param name="pos">欲高亮位置  0千 1百 2十 3位</param>
-        public void LightUp(InputControl.InputType Digital, int pos) {
+        public void LightUp(InputControl.InputType Digital, int pos)
+        {
             for (int i = 0; i < List1.Items.Count; i++)
             {
                 ((HistoryItem)List1.Items[i]).LightUp(Digital, pos);
@@ -117,7 +127,8 @@ namespace _1A2B.Views
         /// <summary>
         /// 清理高亮
         /// </summary>
-        public void ClearLightUp() {
+        public void ClearLightUp()
+        {
             LightUp(InputControl.InputType.NONE, -1);
             ListAll.SelectedItem = null;
             List1.SelectedItem = null;

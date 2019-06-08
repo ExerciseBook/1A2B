@@ -4,6 +4,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace _1A2B.source
 {
+    /// <summary>
+    /// 界面显示模块
+    /// </summary>
     public class DisplayControl
     {
         /// <summary>
@@ -26,11 +29,12 @@ namespace _1A2B.source
         /// </summary>
         public HistoryBoard HistoryBoard { get => historyBoard; private set => historyBoard = value; }
 
-        
+
         /// <summary>
         /// 游戏提示文本框控制类
         /// </summary>
-        public class TNoticeBlock {
+        public class TNoticeBlock
+        {
             /// <summary>
             /// 游戏提示文本框
             /// </summary>
@@ -41,7 +45,8 @@ namespace _1A2B.source
             /// 构造函数
             /// </summary>
             /// <param name="aNoticeBlock">游戏提示文本框</param>
-            public TNoticeBlock(TextBlock aNoticeBlock) {
+            public TNoticeBlock(TextBlock aNoticeBlock)
+            {
                 noticeBlock = aNoticeBlock;
             }
 
@@ -49,8 +54,9 @@ namespace _1A2B.source
             /// 从资源字段中按照 key 取一端出来显示在游戏提示文本框中
             /// </summary>
             /// <param name="key">资源字段</param>
-            public void Print(string key) {
-                noticeBlock.Text=  Core.resourceLoader.GetString(key);
+            public void Print(string key)
+            {
+                noticeBlock.Text = Core.resourceLoader.GetString(key);
             }
 
             /// <summary>
@@ -66,7 +72,7 @@ namespace _1A2B.source
         /// <summary>
         /// 游戏提示文本框控制
         /// </summary>
-        public TNoticeBlock NoticeBlock;
+        public TNoticeBlock NoticeBlock { get; private set; }
 
         /// <summary>
         /// 构造函数
@@ -74,13 +80,14 @@ namespace _1A2B.source
         /// <param name="aInputScreen">输入屏幕控件</param>
         /// <param name="ahistoryBoard">历史记录控件</param>
         /// <param name="aNoticeBlock">游戏提示文本框</param>
-        public DisplayControl(DigitView aInputScreen,HistoryBoard ahistoryBoard,TextBlock aNoticeBlock) {
+        public DisplayControl(DigitView aInputScreen, HistoryBoard ahistoryBoard, TextBlock aNoticeBlock)
+        {
             inputScreen = aInputScreen;
             historyBoard = ahistoryBoard;
             NoticeBlock = new TNoticeBlock(aNoticeBlock);
         }
 
 
-        
+
     }
 }

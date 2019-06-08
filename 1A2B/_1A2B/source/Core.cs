@@ -7,6 +7,9 @@ using Windows.ApplicationModel.Resources;
 
 namespace _1A2B.source
 {
+    /// <summary>
+    /// 辅助类
+    /// </summary>
     class Core
     {
 
@@ -18,27 +21,29 @@ namespace _1A2B.source
         /// <summary>
         /// 输入控制
         /// </summary>
-        static public source.InputControl inputControl;
+        static public InputControl inputControl;
 
         /// <summary>
         /// 游戏控制
         /// </summary>
-        static public source.GameLogic gameControl;
+        static public GameLogic gameControl;
 
         /// <summary>
         /// 显示控制
         /// </summary>
-        static public source.DisplayControl displayControl;
+        static public DisplayControl displayControl;
 
         /// <summary>
         /// 游戏核心控制类
         /// </summary>
-        public class TCoreControl {
+        public class TCoreControl
+        {
 
             /// <summary>
             /// 游戏开始 初始化流程
             /// </summary>
-            public void Start() {
+            public void Start()
+            {
                 displayControl.HistoryBoard.ClearHistory();
                 displayControl.HistoryBoard.ClearLightUp();
                 inputControl.ClearBuff();

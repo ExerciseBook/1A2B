@@ -20,8 +20,14 @@ using Windows.UI.Xaml.Navigation;
 
 namespace _1A2B.Views
 {
+    /// <summary>
+    /// 单条提交记录
+    /// </summary>
     public sealed partial class HistoryItem : UserControl
     {
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public HistoryItem()
         {
             this.InitializeComponent();
@@ -80,9 +86,11 @@ namespace _1A2B.Views
         /// <summary>
         /// 显示内容 反馈部分
         /// </summary>
-        public GameLogic.Response Status {
+        public GameLogic.Response Status
+        {
             get => status;
-            set {
+            set
+            {
                 status = value;
                 Result.Text = (char)(status.nA + 48) + "A" + (char)(status.nB + 48) + "B";
             }
@@ -96,12 +104,14 @@ namespace _1A2B.Views
         /// <param name="position">文本框位数对象 0千 1百 2十 3位</param>
         /// <param name="Digital">欲高亮数码</param>
         /// <param name="pos">欲高亮位置  0千 1百 2十 3位</param>
-        private void LightUp(Button button, TextBlock textblock, int position, InputControl.InputType Digital, int pos) {
+        private void LightUp(Button button, TextBlock textblock, int position, InputControl.InputType Digital, int pos)
+        {
             if (Buff[position] == Digital)
             {
                 textblock.Foreground = new SolidColorBrush(Colors.Red);
             }
-            else {
+            else
+            {
                 textblock.Foreground = new SolidColorBrush((Color)Application.Current.Resources["SystemBaseHighColor"]);
             }
 
@@ -110,7 +120,8 @@ namespace _1A2B.Views
             {
                 button.Background = new SolidColorBrush(Color.FromArgb(0x7F, 0x00, 0xFF, 0xFF)); //高亮
             }
-            else {
+            else
+            {
                 button.Background = new SolidColorBrush(Color.FromArgb(0x00, 0xFF, 0xFF, 0xFF)); //透明
             }
         }
@@ -121,7 +132,8 @@ namespace _1A2B.Views
         /// </summary>
         /// <param name="Digital">欲高亮的数码</param>
         /// <param name="pos">欲高亮位置  0千 1百 2十 3位</param>
-        public void LightUp(InputControl.InputType Digital, int pos) {
+        public void LightUp(InputControl.InputType Digital, int pos)
+        {
             LightUp(ButtonThousand, NumThousand, 0, Digital, pos);
             LightUp(ButtonHundred, NumHundred, 1, Digital, pos);
             LightUp(ButtonTen, NumTen, 2, Digital, pos);
@@ -129,30 +141,42 @@ namespace _1A2B.Views
         }
 
         /// <summary>
-        /// 按钮点击触发高亮
+        /// [按钮] 高亮 千位
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ButtonThousand_Click(object sender, RoutedEventArgs e)
         {
-            Core.displayControl.HistoryBoard.LightUp(Buff[0],0);
+            Core.displayControl.HistoryBoard.LightUp(Buff[0], 0);
         }
 
+        /// <summary>
+        /// [按钮] 高亮 百位
+        /// </summary>
         private void ButtonHundred_Click(object sender, RoutedEventArgs e)
         {
             Core.displayControl.HistoryBoard.LightUp(Buff[1], 1);
         }
 
+        /// <summary>
+        /// [按钮] 高亮 十位
+        /// </summary>
         private void ButtonTen_Click(object sender, RoutedEventArgs e)
         {
             Core.displayControl.HistoryBoard.LightUp(Buff[2], 2);
         }
 
+        /// <summary>
+        /// [按钮] 高亮 个位
+        /// </summary>
         private void ButtonUnit_Click(object sender, RoutedEventArgs e)
         {
             Core.displayControl.HistoryBoard.LightUp(Buff[3], 3);
         }
 
+        /// <summary>
+        /// [按钮] 清理高亮
+        /// </summary>
         private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
             //Core.displayControl.HistoryBoard.LightUp(InputControl.InputType.NONE, -1);

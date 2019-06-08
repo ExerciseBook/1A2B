@@ -17,8 +17,14 @@ using Windows.UI.Xaml.Navigation;
 
 namespace _1A2B.Views
 {
+    /// <summary>
+    /// 虚拟键盘
+    /// </summary>
     public sealed partial class KeyBoard : UserControl
     {
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public KeyBoard()
         {
             this.InitializeComponent();

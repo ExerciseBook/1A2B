@@ -10,6 +10,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace _1A2B.source
 {
+    /// <summary>
+    /// 输入控制模块
+    /// </summary>
     public class InputControl
     {
         /// <summary>
@@ -87,7 +90,7 @@ namespace _1A2B.source
                         number += ((int)inputBuff[i] - 1) * Power(10, (3 - i));
                     }
 
-                    if (Core.gameControl.submit(number) == 0)
+                    if (Core.gameControl.Submit(number) == 0)
                     {
                         Core.displayControl.HistoryBoard.AddHistory(inputBuff, Core.gameControl.LastSubmit);
                         inputBuff = new InputType[4];
@@ -145,6 +148,12 @@ namespace _1A2B.source
             Core.displayControl.InputScreen.MyContent=inputBuff;
         }
 
+        /// <summary>
+        /// 乘方计算器
+        /// </summary>
+        /// <param name="Base">底数</param>
+        /// <param name="Kick">指数</param>
+        /// <returns></returns>
         private int Power(int Base, int Kick)
         {
             int result = 1;

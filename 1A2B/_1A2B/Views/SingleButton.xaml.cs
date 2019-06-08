@@ -18,6 +18,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace _1A2B.Views
 {
+    /// <summary>
+    /// 虚拟键盘按钮
+    /// </summary>
     public sealed partial class SingleButton : UserControl
     {
         /// <summary>
@@ -28,18 +31,25 @@ namespace _1A2B.Views
         /// <summary>
         /// 按钮字体大小
         /// </summary>
-        public double ThisFontSize {
+        public double ThisFontSize
+        {
             get => MyContent.FontSize;
-            set {
+            set
+            {
                 MyContent.FontSize = value;
-            } }
+            }
+        }
 
         /// <summary>
         /// 按钮显示文本
         /// </summary>
-        public string ThisContent { get => MyContent.Text; set {
+        public string ThisContent
+        {
+            get => MyContent.Text; set
+            {
                 MyContent.Text = value;
-            } }
+            }
+        }
 
         /// <summary>
         /// 构造函数
