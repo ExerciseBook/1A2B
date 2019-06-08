@@ -22,13 +22,22 @@ namespace _1A2B.source
         /// </summary>
         private InputType[] inputBuff = new InputType[4];
 
+        private struct KeyStatus
+        {
+            public int Control;
+        };
+
+        private KeyStatus aKeyStatus;
+
         /// <summary>
         /// 构造函数 : 绑定按键侦听事件
         /// </summary>
         public InputControl() {
-            Window.Current.CoreWindow.KeyDown += onKeydown;
+            Window.Current.CoreWindow.KeyDown += OnKeydown;
+            Window.Current.CoreWindow.KeyUp += OnKeyUp;
+            aKeyStatus.Control = 0;
         }
-
+                     
         /// <summary>
         /// 输入事件处理
         /// </summary>
@@ -99,14 +108,28 @@ namespace _1A2B.source
                 if (inputBuff[3] == InputType.NONE)
                 {
                     int i = 0;
-                    while (inputBuff[i] != InputType.NONE) i++;
+                    int flag = 1;
 
-                    if ((i == 0) && (a == InputType.Num0)) {
-                        Core.displayControl.NoticeBlock.Print("NoticeBlock_Error_Input_StartWithZero");
+                    while (inputBuff[i] != InputType.NONE) {
+                        if (inputBuff[i] == a) {
+                            flag = 0;
+                            break;
+                        }
+                        i++;
                     }
-                    else
-                    { 
-                        inputBuff[i] = a;
+
+                    if (flag == 1)
+                    {
+                        if ((i == 0) && (a == InputType.Num0))
+                        {
+                            Core.displayControl.NoticeBlock.Print("NoticeBlock_Error_Input_StartWithZero");
+                        }
+                        else
+                        {
+                            inputBuff[i] = a;
+                        }
+                    } else {
+                        Core.displayControl.NoticeBlock.Print("NoticeBlock_Error_Input_Duplicate");
                     }
                 }
             }
@@ -124,7 +147,7 @@ namespace _1A2B.source
             return result;
         }
 
-        public async void onKeydown(CoreWindow sender, KeyEventArgs e)
+        public async void OnKeydown(CoreWindow sender, KeyEventArgs e)
         {
             // TextTest.Text = e.VirtualKey.GetHashCode().ToString();
             /*
@@ -159,10 +182,35 @@ namespace _1A2B.source
                 case 13: { Input(InputType.Enter); break; }
                 case 27: { Input(InputType.ESC); break; }
                 case 8: { Input(InputType.Backspace); break; }
+                case 17: { aKeyStatus.Control = 1; break; }
+                case 82: {
+                        if (aKeyStatus.Control == 1) {
+                            if (Core.gameControl.GetGameStatus() != 1)
+                            {
+                                Core.CoreControl.Start();
+                            }
+                            else
+                            {
+                                Core.CoreControl.Start();
+                                Core.displayControl.NoticeBlock.Print("NoticeBlock_Info_Game_Restart");
+                            }
+                        }
+                        break;
+                    }
                 //default: throw new Exception(e.VirtualKey.GetHashCode().ToString());
 
             }
 
+        }
+
+
+        public async void OnKeyUp(CoreWindow sender, KeyEventArgs e) {
+            switch (e.VirtualKey.GetHashCode())
+            {
+                case 17: { aKeyStatus.Control = 0; break; }
+                //default: throw new Exception(e.VirtualKey.GetHashCode().ToString());
+
+            }
         }
 
         /// <summary>
